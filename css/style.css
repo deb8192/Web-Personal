@@ -1,0 +1,22 @@
+body
+{
+	margin: 0;
+}
+
+/* Máximo tamaño web */
+
+/* Estilo del slider de index.php */
+.slider_background
+{
+	filter: blur(6px);
+    position: fixed;
+    margin: -12px -12px;
+	max-width: 102%;
+}
+.slider_picture
+{
+	display: flex;
+	max-width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
