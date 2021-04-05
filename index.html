@@ -12,16 +12,20 @@
 		<title>index-D92</title>
 		<meta name = "description" content = "Pagina de inicio del sitio web de D-92">
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css" title = "main style" media = "screen"/>
+		<script src="lib/js/jquery/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/script.js"></script>
 	</head>
 	<body>
 		<header>
 			<nav id="menuPrincipal">
 				<ul>
 					<li><a class = "logo" href="index.html"><img src="img/logo.png" alt = "Logo D-92"/></a></li>
-					<li title="Currículum Vitae"><a href="index.html">CV</li></a>
-					<li title="Proyectos"><a href="index.html">Proyectos</li></a>
-					<li title="Sobre mí"><a href="index.html">Sobre mí</li></a>
-					<li title="Contacto"><a href="index.html">Contacto</li></a>
+					<li title="Merchandising"><a href="index.html">Merchandising</li></a>
+					<li title="Manga"><a href="index.html">Manga</li></a>
+					<li title="Productos Amazon"><a href="index.html">Productos Amazon</li></a>
+					<li title="Blog"><a href="index.html">Blog</li></a>
+					<li title="proyectos"><a href="index.html">Proyectos</li></a>
+					<li title="Sobre m&iacute;"><a href="index.html">Sobre m&iacute;</li></a>
 					<li>
 						<input type="text" title="buscar"></input>
 					</li>
@@ -29,35 +33,16 @@
 			</nav>
 		</header>
 		<!-- CONTENT -->
-		<section>
+		<main id="indexMainContent" class="mainContent">
 			<article id="sliderInicio">
 				<a href="">
 					<img class = "slider_background" src="img/fondo-slider-1.jpg" alt = "Primera diapositiva del slider principal"/>
 					<img class = "slider_picture" src="img/foto-slider-1.jpg" alt = "Primera diapositiva del slider principal"/>
 				</a>
 			</article>
-			<article id="proyectosDestacados">
-				<div>
-					<h2 class="tituloArticulo">Proyectos destacados</h2>
-					<ul>
-						<li title="Proyecto A">
-							<img class="fotoProyectosDestacados" src="img/foto-proyectos-1-mini.jpg" alt = "Primer proyecto destacado">
-						</li>
-						<li title="Proyecto B">
-							<img class="fotoProyectosDestacados" src="img/foto-proyectos-1-mini.jpg" alt = "Primer proyecto destacado">
-						</li>
-						<li title="Proyecto C">
-							<img class="fotoProyectosDestacados" src="img/foto-proyectos-1-mini.jpg" alt = "Primer proyecto destacado">
-						</li>
-					</ul>
-				</div>
-			</article>
-			<article id="masDeMi">
-				<h2 class="tituloArticulo">Más de mí</h2>
-				<a href="">
-					<img class = "enlaceVideocurriculum" src="img/foto-slider-1.jpg" alt = "Enlace a videocurrículum"/>
-				</a>
-			</article>
+		</main>
+		<section id="latestProducts" class="normalSection products">
+			<h2 class="sectionTitle">Proyectos destacados</h2>
 		</section>
 		
 		<!-- !CONTENT -->

@@ -1,5 +1,9 @@
 /* Genérico */
 
+html, #latestProducts
+{	
+    background-color: #d9d9d9;
+}
 body
 {
 	margin: 0;
@@ -8,21 +12,49 @@ ul
 {
 	list-style-type: none;
 }
+* {
+	text-decoration: none;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
 header
 {
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: 1;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 10;
+    border-bottom: solid 5px #000;
     height: 150px;
+    width: 100%;
+}
+h2
+{
+	margin: 0;
+	padding: 15px 0;
 }
 a
 {
-	text-decoration: none;
+	color: black;
 }
-#proyectosDestacados, #sliderInicio
+a:hover, button:hover, .preBtn>i:hover, .nextBtn>i:hover
+{
+    color: #F00;
+    text-decoration: none;
+}
+a, img, button, .pictureGrid article, i
+{
+    transition: .5s;
+}
+
+/* Cuerpo */
+.mainContent
+{
+	padding-top: 150px;
+}
+main, section
 {
 	position: relative;
-    background-color: #3c3c3c;
 }
 
 /* Máximo tamaño web */
@@ -89,36 +121,52 @@ a
 }
 
 /* Estilo de la zona de proyectos destacados de index.html */
+#latestProducts
+{
+	z-index: 1;
+}
+.productsGrid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+        grid-gap: 30px 30px;
+        padding: 0 10%;
+}
+.productsGrid img
+{
+    display: block;
+    margin: 0 auto;
+}
 
-#proyectosDestacados
-{
-	background-color: #d9d9d9;
-}
-#proyectosDestacados>div, #masDeMi
-{
-	width:	1280px;
-	margin: 0 auto;
-	padding: 50px 0;
-}
-#proyectosDestacados>div>ul
-{
-	display: flex;
-	padding: 0;
-}
-
-#proyectosDestacados>div>h2
-{
-	margin: 0;
-}
-#proyectosDestacados>div>ul>li
+#latestProducts>div>ul>li
 {
     margin-right: 100px;
 }
-#proyectosDestacados>div>ul>li:last-child
+#latestProducts>div>ul>li:last-child
 {
 	margin-right: 0;
 }
-.fotoProyectosDestacados
+.fotolatestProducts
 {
 	max-width: 360px;
+}
+
+@media all and (min-width: 720px)
+{
+	/********* Sections *********/
+	
+	.normalSection
+	{
+		padding: 0 15%;
+	}
+    .productsGrid
+    {
+        grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+        grid-gap: 30px 30px;
+        padding: 0 10%;
+    }
+    .productsGrid img 
+    {
+        width: 100%;
+    }
 }
