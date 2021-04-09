@@ -1,7 +1,7 @@
-const /*_true = true,
+const _true = true,
 _false = false,
 
-_midWidth = 720,*/
+_midWidth = 960,
 _zero = 0/*,
 _one = 1,
 _two = 2,
@@ -52,42 +52,43 @@ $(document).ready(function(){
     /*============================================================================
                                 Scroll functions
     ==============================================================================*/
-    /*$(window).scroll(function() {
+    $(window).scroll(function() {
         if($(window).scrollTop() > 0)
         {
             if($(".checkMenu")[_zero].checked)         
             {
-                removeClass("header", "headerActive");
+                removeClass("header", "headerScroll");
             } 
             else {
-                addClass("header", "headerActive");
+                addClass("header", "headerScroll");
             }
         }
         else
         {
-            removeClass("header", "headerActive");
+            removeClass("header", "headerScroll");
         }
-    });*/
+    });
     
     /*============================================================================
                                 Resize functions
     ==============================================================================*/
-    /*$(window).resize(function(){
+    $(window).resize(function(){
         var width = ($(window).outerWidth() > 0) ? $(window).outerWidth() : $(document).outerWidth(),
-        inheritHeight = "inherit",
-        defaultLeftVal = "0%";
+        wholeHeight = "100px",
+        defaultLeftVal = "0%",
+        inheritHeight = "inherit";
         if(width >= _midWidth)
         {
-            //.socialMedia').style.left = defaultLeftVal;       THIS IS WITH ORIGINAL JAVASCRIPT    NEXT LINE IS WITH JQUERY
-            $(".socialMedia").css({left: defaultLeftVal});
-            $('.menuFlags').css({height: inheritHeight});
+            $('#options').css({"left": defaultLeftVal});
+            $('#langFlags').css({"left": defaultLeftVal});
+            $('header').css({height: wholeHeight});
             $('.mainMenu').css({height: inheritHeight});
         }
         else
         {
             showSocial($(".checkMenu")[_zero]);
         }
-    });*/
+    });
 
     /*============================================================================
                                 Home functions
@@ -109,36 +110,23 @@ $(document).ready(function(){
 /*============================================================================
                             Functions related with header
 ==============================================================================*/
-/*function showSocial(checkBox)
+function showSocial(checkBox)
 {
-    var styleLeft = "",
-    color = "",
-    borderBottom = "",
-    checkValPerc = "-50%",
-    nonCheckValPerc = "-200%",
-    height = "10px",
-    inherit = "inherit";
-    if(checkBox.checked == true)
+    var height = "100px",
+    position = "-105%",
+    inherit = "inherit",
+    initial = "initial",
+    defaultLeftVal = "0%";
+    if(checkBox.checked == _true)
     {
-        styleLeft = checkValPerc;
         height = inherit;
-        removeClass("header", "headerActive");
+        position = defaultLeftVal;
     }
-    else
-    {
-        styleLeft = nonCheckValPerc;
-        color = inherit;
-        borderBottom = inherit;
-        if($(window).scrollTop() > 0)
-        {
-            addClass("header", "headerActive");
-        }
-    }
-    $('.socialMedia').css({"left": styleLeft});
-    $('.menuFlags').css({"height": height});
+    $('header').css({"height": height});
     $('.mainMenu').css({"height": height});
-    $('.options').css({"background-color": color, "border-bottom": borderBottom});
-}*/
+    $('#options').css({"left": position});
+    $('#langFlags').css({"left": position});
+}
 
 /*============================================================================
                         Main Slider Functions
@@ -814,7 +802,7 @@ function changeEquivalentLink(changingElement, newLang)
             break;
     }
     return changingElement;
-}
+}*/
 function removeClass(element, className)
 {
     if($(element).hasClass(className))
@@ -829,7 +817,7 @@ function addClass(element, className)
         $(element).addClass(className);
     }
 
-}*/
+}
 
 /*============================================================================
                             Getters

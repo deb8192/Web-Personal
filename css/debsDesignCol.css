@@ -1,0 +1,39 @@
+/* Elements that always have to be inline */
+.responsive-inline-elements, .always-inline-elements
+{
+    position: relative;
+	display: flex;
+}
+.fila-3-col-cent
+{
+    position: relative;
+}
+.fila-3-col-cent .responsive-inline-elements
+{
+    display: block;
+}
+
+/* columns width */
+.fila-3-col-cent>.col-1, .fila-3-col-cent>.col-2, .fila-3-col-cent>.col-3
+{
+    width: 100%;
+}
+@media all and (min-width: 960px)
+{
+    .fila-3-col-cent
+    {
+        padding: 10px 2%;
+    }
+    .fila-3-col-cent, .fila-3-col-cent .responsive-inline-elements
+    {
+        display: flex;
+    }
+    .fila-3-col-cent>.col-1, .fila-3-col-cent>.col-3
+    {
+        width: 15%;
+    }
+    .fila-3-col-cent>.col-2
+    {
+        width: 70%;
+    }
+}
