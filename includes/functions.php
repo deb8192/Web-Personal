@@ -70,6 +70,7 @@
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
                     <a class = "logo" href="index.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             case 2:
@@ -78,6 +79,7 @@
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
                     <a class = "logo" href="home.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             case 3:
@@ -86,6 +88,7 @@
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
                     <a class = "logo" href="home.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             default:
@@ -94,6 +97,7 @@
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
                     <a class = "logo" href="index.html"><img src="img/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
         }
@@ -106,6 +110,7 @@
                 echo 
                 '<div class="col-3">
                     <input type="text" id="headerSearch" title="search"></input>
+                    <button id="hdrSrchMobBtn" onClick="showSearch()"><img src="../img/web-icons/icons/search-solid.svg" width="32px" class="bottom-img"><img src="../img/web-icons/icons/search-solid-hover.svg" width="32px" class="top-img"></button>
                     <ul id="langFlags" class="always-inline-elements"> 
                         <li><button name ="es" onclick="changeLink(this)"><img src="../img/web-icons/flags/spain.png" alt="Spanish flag" width="24px"></button></li>
                         <li><button name ="en" onclick="changeLink(this)"><img src="../img/web-icons/flags/united-kingdom.png" alt="English flag" width="24px"></button></li>
@@ -118,6 +123,7 @@
                 echo 
                 '<div class="col-3">
                     <input type="text" id="headerSearch" title="buscar"></input>
+                    <button id="hdrSrchMobBtn" onClick="showSearch()"><img src="../img/web-icons/icons/search-solid.svg" width="32px" class="bottom-img"><img src="../img/web-icons/icons/search-solid-hover.svg" width="32px" class="top-img"></button>
                     <ul id="langFlags" class="always-inline-elements"> 
                         <li><button name ="es" onclick="changeLink(this)"><img src="../img/web-icons/flags/spain.png" alt="Bandera espanyol" width="24px"></button></li>
                         <li><button name ="en" onclick="changeLink(this)"><img src="../img/web-icons/flags/united-kingdom.png" alt="Bandera anglés" width="24px"></button></li>
@@ -130,6 +136,7 @@
                 echo 
                 '<div class="col-3">
                     <input type="text" id="headerSearch" title="chercher"></input>
+                    <button id="hdrSrchMobBtn" onClick="showSearch()"><img src="../img/web-icons/icons/search-solid.svg" width="32px" class="bottom-img"><img src="../img/web-icons/icons/search-solid-hover.svg" width="32px" class="top-img"></button>
                     <ul id="langFlags" class="always-inline-elements"> 
                         <li><button name ="es" onclick="changeLink(this)"><img src="../img/web-icons/flags/spain.png" alt="Bandera espanyol" width="24px"></button></li>
                         <li><button name ="en" onclick="changeLink(this)"><img src="../img/web-icons/flags/united-kingdom.png" alt="Bandera angl&eacute;s" width="24px"></button></li>
@@ -142,6 +149,7 @@
                 echo 
                 '<div class="col-3">
                     <input type="text" id="headerSearch" title="buscar"></input>
+                    <button id="hdrSrchMobBtn" onClick="showSearch()"><img src="img/web-icons/icons/search-solid.svg" width="32px" class="bottom-img"><img src="img/web-icons/icons/search-solid-hover.svg" width="32px" class="top-img"></button>
                     <ul id="langFlags" class="always-inline-elements"> 
                         <li><button name ="es" onclick="changeLink(this)"><img src="img/web-icons/flags/spain.png" alt="Bandera espa&ntilde;ol" width="24px"></button></li>
                         <li><button name ="en" onclick="changeLink(this)"><img src="img/web-icons/flags/united-kingdom.png" alt="Bandera ingl&eacute;s" width="24px"></button></li>

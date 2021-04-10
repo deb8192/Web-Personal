@@ -52,11 +52,26 @@ a, img, button, .productsGrid article, i
 {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-.oculto
+.hidden
 {
 	display: none;
 }
 /************ Header *************/
+#headerSearch {
+    display: none;
+}
+#headerSearchPhone {
+    transform: translateY(-100px);
+    width: 45%;
+}
+#hdrSrchMobBtn {
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-375px);
+    right: 20px;
+}
 nav
 {
     height: inherit;
@@ -85,6 +100,21 @@ nav
     z-index: 1;
 }
 
+.top-img
+{
+    opacity: 0;
+}
+
+.top-img:hover
+{
+    opacity: 100;
+}
+#hdrSrchMobBtn>.top-img
+{
+    position: absolute;
+    left: 8px;
+}
+
 /* Máximo tamaño web */
 
 /************ Lateral menu *************/
@@ -95,9 +125,12 @@ nav
 }
 #langFlags button
 {
+    padding: 5px;
+}
+#langFlags button, #hdrSrchMobBtn
+{
     border: none;
     background-color: transparent;
-    padding: 5px;
     margin: 0;
 }
 
@@ -253,6 +286,13 @@ footer div
     color: inherit;
     padding: 25px;
 }
+/************** Spetial classes ****************/
+
+.hidden
+{
+	display: none;
+}
+
 @media all and (min-width: 480px)
 {
     .logo>img {
@@ -264,6 +304,16 @@ footer div
 }
 @media all and (min-width: 640px)
 {
+    /********** Header **********/
+
+    #headerSearch {
+        display: initial;
+        transform: translate(50%, -360px);
+        width: 45%;
+    }
+    #hdrSrchMobBtn {
+        display: none;
+    }
     .logo>img {
         margin: 0 15%;
     }
@@ -295,6 +345,9 @@ footer div
     }
     
     /* Estilo del menú principal */
+    #headerSearch {
+        transform: translate(0, 0);
+    }
     
     #logo-block
     {

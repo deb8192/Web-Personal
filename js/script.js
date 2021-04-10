@@ -4,11 +4,19 @@ _false = false,
 _midWidth = 960,
 _zero = 0/*,
 _one = 1,
-_two = 2,
+_two = 2,*/
+
+//DOM Elements
+_header = "header",
+_hdrSrchPhn = "headerSearchPhone",
+
+//Class and ID names
+_hidden = "hidden",
+_headerScroll = "headerScroll"
 
 //Sizes constants
 
-_small = 1,
+/*_small = 1,
 _medium = 2,
 _large = 3,
 _totalSizes = 3,
@@ -57,15 +65,15 @@ $(document).ready(function(){
         {
             if($(".checkMenu")[_zero].checked)         
             {
-                removeClass("header", "headerScroll");
+                removeClass("header", _headerScroll);
             } 
             else {
-                addClass("header", "headerScroll");
+                addClass("header", _headerScroll);
             }
         }
         else
         {
-            removeClass("header", "headerScroll");
+            removeClass("header", _headerScroll);
         }
     });
     
@@ -126,6 +134,15 @@ function showSocial(checkBox)
     $('.mainMenu').css({"height": height});
     $('#options').css({"left": position});
     $('#langFlags').css({"left": position});
+}
+function showSearch()
+{
+    toggleClasses(_hdrSrchPhn, _hidden);
+}
+
+function toggleClasses(element, tgglClss)
+{
+    $("#"+element).toggleClass(tgglClss);
 }
 
 /*============================================================================
