@@ -9,9 +9,13 @@ _two = 2,*/
 //DOM Elements
 _header = "header",
 _hdrSrchPhn = "headerSearchPhone",
+_mainMenu = "mainMenu",
+_divSon = ">div",
+_notFrstChld = ":nth-child(n + 2)"
 
 //Class and ID names
 _hidden = "hidden",
+_searchOn = "search-on",
 _headerScroll = "headerScroll"
 
 //Sizes constants
@@ -95,6 +99,7 @@ $(document).ready(function(){
         else
         {
             showSocial($(".checkMenu")[_zero]);
+            checkSearch();
         }
     });
 
@@ -121,23 +126,55 @@ $(document).ready(function(){
 function showSocial(checkBox)
 {
     var height = "100px",
+    searchOn = "150px",
     position = "-105%",
     inherit = "inherit",
-    initial = "initial",
     defaultLeftVal = "0%";
     if(checkBox.checked == _true)
     {
         height = inherit;
         position = defaultLeftVal;
     }
+    else if(!$("#"+_hdrSrchPhn).hasClass(_hidden))
+    {
+        height = searchOn;
+    }
     $('header').css({"height": height});
-    $('.mainMenu').css({"height": height});
+    $('#mainMenu').css({"height": height});
     $('#options').css({"left": position});
     $('#langFlags').css({"left": position});
 }
 function showSearch()
 {
+    var position = "-50px",
+    height = "150px",
+    initial = "",
+    inherit = "inherit";
+    toggleClasses(_mainMenu+_divSon+_notFrstChld, _searchOn);
     toggleClasses(_hdrSrchPhn, _hidden);
+    if($("#"+_hdrSrchPhn).hasClass(_hidden) || $(".checkMenu")[_zero].checked == _true)
+    {
+        if($(".checkMenu")[_zero].checked == _true)
+        {
+            height = inherit;
+        }
+        else
+        {
+            position = initial;
+            height = "";
+        }
+    }
+    $('header').css({"height": height});
+    $('#mainMenu').css({"height": height});
+    $("#"+_hdrSrchPhn).css({"transform": "translateY("+position+")"});
+    $(".mainContent").css("padding-top",height);
+}
+function checkSearch()
+{
+    if(!$("#"+_hdrSrchPhn).hasClass(_hidden))
+    {
+        showSearch();
+    }
 }
 
 function toggleClasses(element, tgglClss)
@@ -444,7 +481,12 @@ function showGridProducts(/*picture, language*/)
     //idName = picture.title.split('.')[0],
     //languagesRedirection = "../",
     //finalUrl = picture.urlPic,
-    html;
+    finalUrl,
+    pic,
+    prodTitle,
+    vote,
+    star,
+    price;
     /*switch (type)
     {
         case 1:
@@ -463,13 +505,26 @@ function showGridProducts(/*picture, language*/)
     {
         finalUrl = languagesRedirection.concat(picture.urlPic);
     }*/
-    
-    html = $("<img>");
-    html.attr("class", "image");
-    //html.attr("src", img/foto-proyectos-1-mini.jpg");
-    html.attr("src", "img/foto-proyectos-1-mini.jpg");
-    //html.attr("alt", picture.picDescription);
-    html.attr("alt", "Foto test");
+    finalUrl = $("<a></a>").attr("href", "producto.php");
+
+    pic = $("<img>");
+    pic.attr("class", "image");
+    //pic.attr("src", img/foto-proyectos-1-mini.jpg");
+    pic.attr("src", "img/foto-proyectos-1-mini.jpg");
+    //pic.attr("alt", picture.picDescription);
+    pic.attr("alt", "Foto test");
+
+    prodTitle = $("<h3></h3>").text("Product title");    
+
+    vote = $("<p></p>").text("4,5 de 5");
+    price = $("<p></p>").text("Precio: 18,90€");
+    star = $("<img>");
+    star.attr("width", "32");
+    star.attr("height", "32");
+    star.attr("class", "starIcon");
+    star.attr("src", "img/web-icons/icons/star.png");
+    star.attr("alt", "Foto test star");
+
 
     let article = $("<article>");
     article.attr("class", className);
@@ -481,7 +536,12 @@ function showGridProducts(/*picture, language*/)
         let idLargName = idLargNameArray[0].concat('-lar-' + idLargNameArray[2]);
         article.attr("onclick", "modalPicture(document.getElementById('" + idLargName + "'))");
     }*/
-    article.append(html);
+    vote.prepend(star);
+    finalUrl.append(pic);
+    article.append(finalUrl);
+    article.append(prodTitle);
+    article.append(vote);
+    article.append(price);
     return article;
 }
 

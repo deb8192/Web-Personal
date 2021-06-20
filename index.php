@@ -13,7 +13,8 @@
             include_once("includes/header.php");
         ?>
 		<!-- CONTENT -->
-		<main id="indexMainContent" class="mainContent">
+		<main id="indexMainContent" class="mainSpecialContent">
+			<h1 style="display: none;">DebsDesign web</h2>
 			<article id="sliderInicio">
 				<a href="">
 					<img class = "slider_background" src="img/fondo-slider-1.jpg" alt = "Primera diapositiva del slider principal"/>

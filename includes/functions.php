@@ -10,12 +10,12 @@
             echo 
             '<div class="col-2">
                 <ul id="options" class="responsive-inline-elements">
-                    <li title="Merchandising"><a href="index.html">Merchandising</li></a>
-                    <li title="Manga"><a href="index.html">Manga</li></a>
-                    <li title="Productos Amazon"><a href="index.html">Productos Amazon</li></a>
-                    <li title="Blog"><a href="index.html">Blog</li></a>
-                    <li title="proyectos"><a href="index.html">Proyectos</li></a>
-                    <li title="Sobre m&iacute;"><a href="index.html">Sobre m&iacute;</li></a>
+                    <li title="Merchandising"><a href="merchandising.php">Merchandising</li></a>
+                    <li title="Manga"><a href="index.php">Manga</li></a>
+                    <li title="Productos Amazon"><a href="index.php">Productos Amazon</li></a>
+                    <li title="Blog"><a href="index.php">Blog</li></a>
+                    <li title="proyectos"><a href="index.php">Proyectos</li></a>
+                    <li title="Sobre m&iacute;"><a href="index.php">Sobre m&iacute;</li></a>
                     <li>
                         <input type="text" title="buscar"></input>
                     </li>
@@ -30,12 +30,12 @@
             echo 
             '<div class="col-2">
                 <ul id="options" class="responsive-inline-elements">
-                    <li title="Merchandising"><a href="index.html">Merchandising</li></a>
-                    <li title="Manga"><a href="index.html">Manga</li></a>
-                    <li title="Productos Amazon"><a href="index.html">Productos Amazon</li></a>
-                    <li title="Blog"><a href="index.html">Blog</li></a>
-                    <li title="proyectos"><a href="index.html">Proyectos</li></a>
-                    <li title="Sobre m&iacute;"><a href="index.html">Sobre m&iacute;</li></a>
+                    <li title="Merchandising"><a href="merchandising.php">Merchandising</li></a>
+                    <li title="Manga"><a href="index.php">Manga</li></a>
+                    <li title="Productos Amazon"><a href="index.php">Productos Amazon</li></a>
+                    <li title="Blog"><a href="index.php">Blog</li></a>
+                    <li title="proyectos"><a href="index.php">Proyectos</li></a>
+                    <li title="Sobre m&iacute;"><a href="index.php">Sobre m&iacute;</li></a>
                     <li>
                         <input type="text" title="buscar"></input>
                     </li>
@@ -49,12 +49,12 @@
             echo 
             '<div class="col-2">
                 <ul id="options" class="responsive-inline-elements">
-                    <li title="Merchandising"><a href="index.html">Merchandising</li></a>
-                    <li title="Manga"><a href="index.html">Manga</li></a>
-                    <li title="Productos Amazon"><a href="index.html">Productos Amazon</li></a>
-                    <li title="Blog"><a href="index.html">Blog</li></a>
-                    <li title="proyectos"><a href="index.html">Proyectos</li></a>
-                    <li title="Sobre m&iacute;"><a href="index.html">Sobre m&iacute;</li></a>
+                    <li title="Merchandising"><a href="merchandising.php">Merchandising</li></a>
+                    <li title="Manga"><a href="index.php">Manga</li></a>
+                    <li title="Productos Amazon"><a href="index.php">Productos Amazon</li></a>
+                    <li title="Blog"><a href="index.php">Blog</li></a>
+                    <li title="proyectos"><a href="index.php">Proyectos</li></a>
+                    <li title="Sobre m&iacute;"><a href="index.php">Sobre m&iacute;</li></a>
                 </ul>
             </div>';
             headerFlagRoutes(Constant::ZERO);
@@ -69,8 +69,8 @@
                 '<div id="logo-block" class="col-1 responsive-inline-elements">
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
-                    <a class = "logo" href="index.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
-                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
+                    <a class = "logo" href="index.php"><img src="../img/logo/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="searchButton hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             case 2:
@@ -78,8 +78,8 @@
                 '<div id="logo-block" class="col-1 responsive-inline-elements">
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
-                    <a class = "logo" href="home.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
-                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
+                    <a class = "logo" href="home.php"><img src="../img/logo/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="searchButton hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             case 3:
@@ -87,8 +87,8 @@
                 '<div id="logo-block" class="col-1 responsive-inline-elements">
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
-                    <a class = "logo" href="home.html"><img src="../img/logo.png" alt = "Logo DebsDesign"/></a>
-                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
+                    <a class = "logo" href="home.php"><img src="../img/logo/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="searchButton hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
             default:
@@ -96,8 +96,8 @@
                 '<div id="logo-block" class="col-1 responsive-inline-elements">
                     <label for="mLateral"><i class="flaticon flaticon-list"></i></label>
                     <input type="checkbox" class="checkMenu" name="mLateral" id="mLateral" onclick="showSocial(this)"/>
-                    <a class = "logo" href="index.html"><img src="img/logo.png" alt = "Logo DebsDesign"/></a>
-                    <input type="text" class="hidden" id="headerSearchPhone" title="buscar"></input>
+                    <a class = "logo" href="index.php"><img src="img/logo/logo.png" alt = "Logo DebsDesign"/></a>
+                    <input type="text" class="searchButton hidden" id="headerSearchPhone" title="buscar"></input>
                 </div>';
                 break;
         }

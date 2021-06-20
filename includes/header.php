@@ -44,7 +44,7 @@
     else
     { */?>
         <header>
-            <nav id="mainMenu" class="fila-3-col-cent">
+            <nav id="mainMenu" class="row-3-cent-col">
                 <?php
                     createHeaderMenuOptions($engLang, $catLang, $lang);
                 ?>

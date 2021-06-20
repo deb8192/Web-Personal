@@ -1,39 +1,58 @@
-/* Elements that always have to be inline */
+/* Elements that have to be inline */
 .responsive-inline-elements, .always-inline-elements
 {
     position: relative;
 	display: flex;
 }
-.fila-3-col-cent
+.row-3-cent-col
 {
     position: relative;
 }
-.fila-3-col-cent .responsive-inline-elements
+.row-3-cent-col .responsive-inline-elements
 {
     display: block;
 }
 
-/* columns width */
-.fila-3-col-cent>.col-1, .fila-3-col-cent>.col-2, .fila-3-col-cent>.col-3
+/* columns width: 100% */
+.row-3-cent-col>.col-1, .row-3-cent-col>.col-2, .row-3-cent-col>.col-3
+.row-2-left-col>.col-1, .row-2-left-col>.col-2
 {
     width: 100%;
 }
 @media all and (min-width: 960px)
 {
-    .fila-3-col-cent
+    /* 3 columns: L & R 20% and center col 60% */
+    .row-3-cent-col
     {
-        padding: 10px 2%;
+        padding: 5px 2%;
     }
-    .fila-3-col-cent, .fila-3-col-cent .responsive-inline-elements
+    .row-3-cent-col, .row-3-cent-col .responsive-inline-elements
     {
         display: flex;
     }
-    .fila-3-col-cent>.col-1, .fila-3-col-cent>.col-3
+    .row-3-cent-col>.col-1, .row-3-cent-col>.col-3
     {
-        width: 15%;
+        width: 20%;
     }
-    .fila-3-col-cent>.col-2
+    .row-3-cent-col>.col-2
     {
-        width: 70%;
+        width: 60%;
+    }
+    /* 2 columns: L 60% R 40% */
+    .row-2-left-col
+    {
+        padding: 5px 2%;
+    }
+    .row-2-left-col, .row-2-left-col .responsive-inline-elements
+    {
+        display: flex;
+    }
+    .row-2-left-col>.col-1
+    {
+        width: 60%;
+    }
+    .row-2-left-col>.col-2
+    {
+        width: 40%;
     }
 }
