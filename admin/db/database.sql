@@ -138,6 +138,35 @@ CREATE TABLE Tags
 	
 )
 
+CREATE TABLE Categories
+(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	name VARCHAR (20),
+	description VARCHAR (150)
+	parentCat INT UNSIGNED,
+	typeCat INT UNSIGNED NOT NULL,
+	
+	PRIMARY KEY (id),
+	
+	FOREIGN KEY (parentCat) REFERENCES Categories (id)
+		ON UPDATE CASCADE
+		ON DELETE SET NULL,
+		
+	FOREIGN KEY (typeCat) References TypeCategory (id)
+		ON UPDATE CASCADE
+		ON DELETE SET NULL
+		
+) ENGINE = innodb;
+
+CREATE TABLE TypeCategory
+(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	description VARCHAR (20),
+	
+	PRIMARY KEY (id),
+
+)ENGINE = innodb;
+
 /********************************************
 ************  Product features  *************
 *********************************************/
