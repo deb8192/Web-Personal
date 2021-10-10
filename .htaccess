@@ -1,0 +1,19 @@
+# File created to configure the symbolic links used in all the web requests
+
+# We will allow the use of symbolic links.
+# We will allow the server to rewrite uris
+Options +FollowSymLinks
+RewriteEngine on
+
+# It change the absolute path D:\xampp\htdocs\davidweb\admin\api
+# to the following symbolic path
+RewriteBase /debsdesign/
+# RewriteBase /Web_debora/Web-personal/
+
+##################################################
+############      PRODUCTS RULES     #############
+##################################################
+
+############       DYNAMIC URL       #############
+
+RewriteRule ^merchandising/camisetas/producto/(.*)$ merchandising/camisetas/producto/index.php [L]

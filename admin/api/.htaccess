@@ -1,0 +1,68 @@
+# File created to configure the symbolic links used in all the web requests
+
+# We will allow the use of symbolic links.
+# We will allow the server to rewrite uris
+Options +FollowSymLinks
+RewriteEngine On
+
+# It change the absolute path D:\xampp\htdocs\davidweb\admin\api
+# to the following symbolic path
+RewriteBase /debsdesign/admin/api/
+# RewriteBase /Web_debora/Web-personal/admin/api/
+
+##################################################
+############      PRODUCTS RULES     #############
+##################################################
+
+############       DYNAMIC URL       #############
+
+RewriteRule producto(.*)$ producto/ [L]
+
+############       GET PRODUCTS      #############
+# This rule redirects all symbolic links related
+# to GET PRODUCTS to the url api/get/products.php
+
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^products(.*)$ get/products.php?$1&%{QUERY_STRING} [L]
+
+##################################################
+############      PICTURES RULES     #############
+##################################################
+
+############       GET PICTURES      #############
+# This rule redirects all symbolic links related
+# to GET PICTURES to the url api/get/pictures.php
+
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^pictures(.*)$ get/pictures.php?prm=$1&%{QUERY_STRING} [L]
+
+##################################################
+############      VIDEOS RULES     #############
+##################################################
+
+############       GET VIDEOS      #############
+# This rule redirects all symbolic links related
+# to GET VIDEOS to the url api/get/videos.php
+
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^videos(.*)$ get/videos.php?prm=$1&%{QUERY_STRING} [L]
+
+
+##################################################
+############      DOCUMENT RULES     #############
+##################################################
+
+############      GET DOCUMENTS      #############
+# This rule redirects all symbolic links related
+# to GET VIDEOS to the url api/get/videos.php
+
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^documents(.*)$ get/documents.php?prm=$1&%{QUERY_STRING} [L]
