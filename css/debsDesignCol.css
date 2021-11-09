@@ -163,7 +163,11 @@
     {
         padding: 20px 10%;
         margin: 25px;
+<<<<<<< HEAD
         max-height: 250px;
+=======
+        max-height: 275px;
+>>>>>>> metaSeo
     }
     .slider_background, .bGSliderBig
     {

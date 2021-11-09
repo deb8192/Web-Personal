@@ -54,23 +54,23 @@
             echo 
             '<div class="col-2">
                 <ul id="options" class="responsive-inline-elements">
-                    <li id="merchandising" title="Merchandising" class ="dropdown-menu dropDown-lv1">Merchandising
+                    <li title="Merchandising" class ="dropdown-menu dropDown-lv1"><a id="merchandising">Merchandising</a>
                         <ul class="dropdownList">
                             <li id="'. Constant::CAMISETAS .'" title="Camisetas" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_CAMISETAS . '">Camisetas</a></li>
                         </ul>
                     </li>
-                    <li id="tiendas" title="Tiendas" class ="dropdown-menu dropDown-lv1">Tiendas
+                    <li title="Tiendas" class ="dropdown-menu dropDown-lv1"><a id="tiendas">Tiendas</a>
                         <ul class="dropdownList">
                             <li id="'. Constant::LATOSTADORA .'" title="Latostadora" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_LATOSTADORA . '">Latostadora</a></li>
                         </ul>
                     </li>
-                    <li id="modelos" title="Modelos" class ="dropdown-menu dropDown-lv1">Modelos
+                    <li title="Modelos" class ="dropdown-menu dropDown-lv1"><a id="modelos">Modelos</a>
                         <ul class="dropdownList">
                             <li id="'. Constant::HOMBRE .'" title="Hombre" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_HOMBRE . '">Hombre</a></li>
                             <li id="'. Constant::MUJER .'" title="Mujer" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_MUJER . '">Mujer</a></li>
                         </ul>
                     </li>
-                    <li id="tematica" title="Tem&aacute;tica" class ="dropdown-menu dropDown-lv1">Tem&aacute;tica
+                    <li title="Tem&aacute;tica" class ="dropdown-menu dropDown-lv1"><a id="tematica">Tem&aacute;tica</a>
                         <ul class="dropdownList">
                             <li id="'. Constant::CINE .'" title="Cine" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_CINE . '">Cine</a></li>
                             <!--<li id="'. Constant::VIDEOJUEGOS .'" title="Videojuegos" class="menuOption none dropDown-lv2"><a href="'. $index . Constant::URL_VIDEOJUEGOS . '">Videojuegos</a></li>

@@ -13,10 +13,18 @@
             include_once($_SERVER['DOCUMENT_ROOT']."/Web_Debora/Web-personal/includes/header.php");
         ?>
 		<!-- CONTENT -->
+<<<<<<< HEAD
         <main class="mainContent products">
             <h1>Tiendas</h1>
 			<h2 class="sectionTitle">Productos de La Tostadora</h2><!-- TO DO: estos h2 salen en funcion de la tienda elegida -->
 		</main>
+=======
+        <main class="mainContent mainSectionText">
+            <h1>Tienda Latostadora</h1>
+		</main>
+		<section class="normalSection products">
+		</section>
+>>>>>>> metaSeo
 		
 		
 		<!-- !CONTENT -->

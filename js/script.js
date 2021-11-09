@@ -8,6 +8,7 @@ _one = 1,
 /*_two = 2,*/
 
 //DOM Elements
+_head = "head",
 _header = "header",
 _hdrSrchPhn = "headerSearchPhone",
 _mainMenu = "mainMenu",
@@ -16,12 +17,45 @@ _notFrstChld = ":nth-child(n + 2)",
 _mainProducts = "mainProducts",
 _productData = "productData",
 
+//DOM get tags
+_divTag = "div",
+_titleTag = "title",
+_metaTag = "meta",
+_mainTag = "main",
+
+//DOM create tags
+_pNewTag = "<p></p>",
+_divNewTag = "<div></div>",
+_metaNewTag = "<meta></meta>",
+_linkNewTag = "<link></link>",
+
+//Tag attributes
+_hrefAttr = "href",
+_contentAttr = "content",
+_nameAttr = "name",
+_classAttr = "class",
+_descriptionAttrVal = "description",
+_relAttr = "rel",
+_canonicalAttrVal = "canonical",
+_robotsAttrVal = "robots",
+_indexAttrVal = "index",
+_noindexAttrVal = "noindex",
+_followAttrVal = "follow",
+_nofollowAttrVal = "nofollow",
+
 //Class and ID names
+_idHash = '#',
+_clssDot = '.',
 _hidden = "hidden",
 _none = "none",
 _dropdownMenu = "dropdown-menu",
 _searchOn = "search-on",
 _headerScroll = "headerScroll",
+_merchandisingID  = "merchandising",
+_tiendasID = "tiendas",
+_modelosID = "modelos",
+_tematicaID = "tematica",
+_mainSectionText = "mainSectionText"
 
 //Sizes constants
 
@@ -43,7 +77,36 @@ _catalanSel = 2,
 _englishPages = ["home.php", "cv.php", "book.php", "reel.php", "news.php", "about-me.php", "contact.php"],
 _catalanPages = ["home.php", "cv.php", "book.php", "reel.php", "noticies.php", "sobre-mi.php", "contacte.php"],*/
 
+//Directories
+_void = "",
+_urlIndex = "http://" + window.location.hostname + "/Web_Debora/Web-personal/",
+_urlParamEquals = '=',
+_urlParamHyphen = '-',
+_urlParamBegin = '?',
+_urlParamAdd = '&',
+_urlSlash = '/',
+_urlParamCategory = "categ",
+_urlParamSlug = "slug",
+_urlParamPage = "page",
+_serverGetFunction = 'GET',
+_serverRequests = _urlIndex + "admin/api",
+_serverProducts = '/products',
+_serverVideos = '/videos',
+_serverMeta = '/meta',
+_serverText = '/text',
+//_closeIcon = "images/web-icons/icons/times-solid.svg",
+//_closeIconHover = "images/web-icons/icons/times-solid-hover.svg",
+
+//Other symbols
+_comma = ',',
+
+//Kind of texts´
+_metaTexts = 0,
+_sectionTexts = 1,
+_blogArticles = 2,
+
 //Categories
+_debsdesignweb  = 0,
 _merchandising  = 1,
 _tiendas        = 2,
 _modelos        = 3,
@@ -80,23 +143,6 @@ _videojuegos    = 31,
 _animales       = 32,
 _crossover      = 33,
 _cartoon        = 34,
-
-//Directories
-_void = "",
-_urlIndex = "http://" + window.location.hostname + "/Web_Debora/Web-personal/",
-_urlParamEquals = '=',
-_urlParamHyphen = '-',
-_urlParamBegin = '?',
-_urlParamAdd = '&',
-_urlSlash = '/',
-_urlParamCategory = "categ",
-_urlParamSlug = "slug",
-_serverGetFunction = 'GET',
-_serverRequests = _urlIndex + "admin/api",
-_serverProducts = '/products',
-_serverVideos = '/videos',
-//_closeIcon = "images/web-icons/icons/times-solid.svg",
-//_closeIconHover = "images/web-icons/icons/times-solid-hover.svg",
 
 //Categories name
 _merchandisingName  = "merchandising",
@@ -144,11 +190,7 @@ _errorNotFound = 404;
 
 //Direct JQuery
 $(document).ready(function(){
-    /*var width = ($(window).outerWidth() > 0) ? $(window).outerWidth() : $(document).outerWidth();
-        if(width < _midWidth)
-        {
-            showSocial($(".checkMenu")[_zero]);
-        }*/
+
     /*============================================================================
                                 Scroll functions
     ==============================================================================*/
@@ -190,32 +232,39 @@ $(document).ready(function(){
         }
         if(width >= _midMidWidth)
         {
-            $("#"+_hdrSrchPhn).css({"transform": ""});
+            $(_idHash + _hdrSrchPhn).css({"transform": ""});
         }
-    });
+    });    
+
+    /*============================================================================
+                            Metadata and Texts functions
+    ==============================================================================*/
+
+    loadPageData(_metaTexts);
+    loadPageData(_sectionTexts);
 
     /*============================================================================
                             Drop down menu functions
     ==============================================================================*/
 
-    $("#merchandising").hover(function(){
+    $(_idHash + _merchandisingID).click(function(){
         this.style.cursor = "default";
-        showMenuChild(this);
+        showMenuChild(this.parentElement);
     });
 
-    $("#tiendas").hover(function(){
+    $(_idHash + _tiendasID).click(function(){
         this.style.cursor = "default";
-        showMenuChild(this);
+        showMenuChild(this.parentElement);
     });
     
-    $("#modelos").hover(function(){
+    $(_idHash + _modelosID).click(function(){
         this.style.cursor = "default";
-        showMenuChild(this);
+        showMenuChild(this.parentElement);
     });
     
-    $("#tematica").hover(function(){
+    $(_idHash + _tematicaID).click(function(){
         this.style.cursor = "default";
-        showMenuChild(this);
+        showMenuChild(this.parentElement);
     });
 
     /*============================================================================
@@ -242,6 +291,35 @@ $(document).ready(function(){
 function toUpperCaseFirstLetter(string) {
     return string.charAt(_zero).toUpperCase() + string.slice(_one);
   }
+
+function addAttr(element, attr, value)
+{
+    element.attr(attr, value);
+    return element;
+}
+
+function appendElement(mainElement, appendix)
+{
+    mainElement.append(appendix);
+}
+
+function getUrlSearchElement()
+{
+    var urlArray = window.location.href.split(_urlSlash),
+    element = "";
+
+    //Slug always will be full. This part is for categories whose url used to end in '/'
+    if(urlArray[urlArray.length - _one] == _void)
+    {
+        urlArray.pop();
+    }
+    element = urlArray.pop();
+    if(_urlIndex.toLowerCase().includes(element.toLowerCase()))
+    {
+        element = "";
+    }
+    return element;
+}
   
 
  /*============================================================================
@@ -251,7 +329,7 @@ function toUpperCaseFirstLetter(string) {
 function showMenuChild(menuOption)
 {
     //toggleClasses(menuOption.children[0].children[0].id, _none);
-    arrayOptions = menuOption.children[0].children;
+    arrayOptions = menuOption.children[_one].children;
     for(let i = _zero; i < arrayOptions.length; i++)
     {
         toggleClasses(arrayOptions[i].id, _none);
@@ -294,6 +372,128 @@ async function serverCommunicationSync(serverFunction, request, param)
         else return -1;
     }    
     else return -1;
+}
+
+/*============================================================================
+                    Functions related with head, Meta and Texts
+==============================================================================*/
+
+function loadPageData(kindOfText)
+{
+    switch(kindOfText)
+    {
+        case _sectionTexts:
+            loadSectionTexts();
+            break;
+
+        //case _blogArticles:
+            //break;
+
+        default:
+            loadMeta();
+            break;
+    }
+}
+
+function loadTextsParamsReq()
+{
+    var page = _urlParamPage + _urlParamEquals,
+    pageElement = getUrlSearchElement();
+
+    if(_void == pageElement)
+    {
+        page = _void;
+    }
+    else
+    {
+        page = page.concat(pageElement);
+    }
+    return page;
+}
+
+async function loadMeta()
+{
+    var page = loadTextsParamsReq(),
+    lang = getLangPage(),
+    
+    data = await serverCommunicationSync(_serverGetFunction, _serverRequests + _serverMeta + _urlParamBegin, page);
+    if(data != -1)
+    {
+        data.FILAS.forEach(function(obj)
+        {
+            createMeta(obj);
+        });
+    }
+}
+
+function createMeta(metaData)
+{
+    var title = $(_titleTag),
+    metaDescription = $(_metaNewTag),
+    metaRobots = $(_metaNewTag),
+    metaCanonical = $(_linkNewTag);
+
+    title.text(metaData.titulo); 
+
+    metaDescription = addAttr(metaDescription, _nameAttr, _descriptionAttrVal);
+    metaDescription = addAttr(metaDescription, _contentAttr, metaData.descripcion);
+
+    metaCanonical = addAttr(metaCanonical, _relAttr, _canonicalAttrVal);
+    metaCanonical = addAttr(metaCanonical, _hrefAttr, location.hostname + location.pathname);
+    
+    metaRobots = addAttr(metaRobots, _nameAttr, _robotsAttrVal);
+
+    if(metaData.robotIndex > _zero)
+    {
+        if(metaData.robotFollow > _zero)
+        {
+            metaRobots = addAttr(metaRobots, _contentAttr, _indexAttrVal + _comma + _followAttrVal);
+        }
+        else
+        {
+            metaRobots = addAttr(metaRobots, _contentAttr, _indexAttrVal + _comma + _nofollowAttrVal);
+        }
+    }
+    else
+    {
+        if(metaData.robotFollow > _zero)
+        {
+            metaRobots = addAttr(metaRobots, _contentAttr, _noindexAttrVal + _comma + _followAttrVal);
+        }
+        else
+        {
+            metaRobots = addAttr(metaRobots, _contentAttr, _noindexAttrVal + _comma + _nofollowAttrVal);
+        }
+    }
+    appendElement($(_head), title);
+    appendElement($(_head), metaDescription);
+    appendElement($(_head), metaDescription);
+    appendElement($(_head), metaRobots);
+}
+
+async function loadSectionTexts()
+{
+    
+    var page = loadTextsParamsReq(),
+    lang = getLangPage(),
+    
+    data = await serverCommunicationSync(_serverGetFunction, _serverRequests + _serverText + _urlParamBegin, page);
+    if(data != -1)
+    {
+        data.FILAS.forEach(function(obj)
+        {
+            createSectionTexts($(_clssDot+_mainSectionText), obj);
+        });
+    }
+}
+
+function createSectionTexts(section, textsData)
+{
+    var text = $(_pNewTag),
+    normalTextClss = "normalText";
+    text = addAttr(text, _classAttr, normalTextClss);
+    text[_zero].innerHTML  = textsData.articulo;
+    appendElement(section[_zero], text[_zero]);
 }
 
 /*============================================================================
@@ -371,273 +571,32 @@ function toggleClasses(element, tgglClss)
 }
 
 /*============================================================================
-                        Main Slider Functions
-==============================================================================*/
-
-//Functions that ask to server to get main Slider pictures
-/*function loadSliderPictures()
-{
-    var parmSectionID = '/1',
-    data,
-    //We get html lang attribute to send the correct language code to showSlidePictures() function
-    lang = getLangPage();
-    //Request creation
-    xmlhttpRequest = new XMLHttpRequest();
-
-    //Request execution
-    xmlhttpRequest.onreadystatechange = function () {
-        if (xmlhttpRequest.readyState === _done) {
-            if (xmlhttpRequest.status === _ok) {
-                console.log(xmlhttpRequest.status); // 'This is the output.'
-                data = JSON.parse(xmlhttpRequest.response)
-                data.FILAS.forEach(function(obj){
-                    if (lang == _catalan)
-                    {
-                        showSlidePictures(obj, _catalanSel);
-                    }
-                    else if (lang == _english)
-                    {
-                        showSlidePictures(obj, _englishSel);
-                    }
-                    else showSlidePictures(obj, _spanishSel);
-                });
-                
-            } else {
-                console.log('Error: ' + xmlhttpRequest.status); // An error occurred during the request.
-            }
-        }
-    };
-    
-    xmlhttpRequest.open(_serverGetFunction, _serverRequests + _serverPictures + parmSectionID, _true);
-    xmlhttpRequest.send();
-}
-
-function showSlidePictures(picture, language)
-{
-    var type = parseInt(picture.picSizeID),
-    className = "",
-    languagesRedirection = "../",
-    finalUrl = picture.urlPic,
-    html;
-    switch (type)
-    {
-        case 1:
-            className = "sml";
-        break;
-        
-        case 2:
-            className = "med";
-        break;
-        
-        case 3:
-            className = "lar";
-        break;
-    }
-    if(language != _spanishSel)
-    {
-        finalUrl = languagesRedirection.concat(picture.urlPic);
-    }
-    html = $("<img>");
-    html.attr("class", className);
-    html.attr("src", finalUrl);
-    html.attr("alt", picture.picDescription);
-    
-    $("#mainSlider").append(html);
-}*/
-
-/*============================================================================
-                            Functions related with modals
-==============================================================================*/
-
-/*TO FINISH: 
-ocultar barra de scroll*/
-/*function createModal(modal)
-{
-    let div = $("<div></div>"),
-    html = $("<button>")
-            .append($("<img></img>")
-                .attr({"src":_closeIcon, "class":"bottom-img"}))
-            .append($("<img></img>")
-                .attr({"src":_closeIconHover, "class":"top-img"}));
-
-    html.attr("class", "closeModal");
-    html.attr("onclick", "removeModal()")
-    
-    div.attr("id", "modal");
-    
-    modal.contents().prepend(html);
-    div.append(modal);
-    $('#mainPic').append(div);
-    return div;
-}
-function modalPicture(imgDir)
-{
-    let html = $("<div></div>")
-        .attr("id","content")
-        .append($("<div></div>")
-            .attr("id","contentAndClose")
-            .append($("<img></img>")
-                .attr("src",imgDir.children[0].src)))
-                .attr("class",imgDir.id),
-    modal = createModal(html);
-    createModalPagination();
-}
-
-function removeModal()
-{
-    $("#modal").remove();
-}
-
-//Modal pagination function
-function createModalPagination()
-{
-    let leftArrow = $("<i></i>"),
-    rightArrow = $("<i></i>"),
-    leftButton = $("<button></button>"),
-    rightButton = $("<button></button>");
-
-    leftArrow.attr("class", "flaticon flaticon-left-arrow");        
-    rightArrow.attr("class", "flaticon flaticon-next");
-    leftButton.attr("class", "preBtn");
-    leftButton.attr("onclick", "changeResource(this.parentElement, -1)");
-    rightButton.attr("class", "nextBtn");
-    rightButton.attr("onclick", "changeResource(this.parentElement, 1)");
-    leftButton.attr("class", "preBtn");
-    rightButton.attr("class", "nextBtn");
-
-    leftButton.append(leftArrow);
-    rightButton.append(rightArrow);
-    
-    $("#content").prepend(leftButton);
-    $("#content").append(rightButton);
-}
-
-//Modal selection function
-function changeResource(object, right)
-{
-    var idObject = getNextImageById(object, right);
-    if(idObject != null)
-    {
-        if($('#'+idObject)[0] != null)
-        {
-            let newPicSrc = $('#'+idObject)[0].children[0].src;
-            if(newPicSrc)
-            {
-                object.children[1].children[1].src = newPicSrc;
-                object.className = idObject;
-            }
-        }
-        else
-        {
-            let newPicSrc = null;
-            if(right == _one)
-            {
-                idObject = getFirstImageById(object);
-            }
-            else
-            {
-                idObject = getLastImageById(object, $('#'+object.className).parent().children().length/_totalSizes);
-            }
-            newPicSrc = $('#'+idObject)[0].children[0].src;
-            if(newPicSrc)
-            {
-                object.children[1].children[1].src = newPicSrc;
-                object.className = idObject;
-            }
-        }
-    }
-}
-
-//Get next image by id
-function getNextImageById(object, right)
-{
-    let idObjectArray = splitString(object.className, '-'),
-    idObject = "";
-    idObject = getNextIdObject(idObjectArray, right);
-    return idObject;
-}
-//Get first image by id
-function getFirstImageById(object)
-{
-    let idObjectArray = splitString(object.className, '-'),
-    idObject = "";
-    idObject = getIdObject(idObjectArray, _one);
-    return idObject;
-}
-//Get last image by id
-function getLastImageById(object, lastId)
-{
-    let idObjectArray = splitString(object.className, '-'),
-    idObject = "";
-    idObject = getIdObject(idObjectArray, lastId);
-    return idObject;
-}
-//Get the array object id
-function getIdObject(idObjectArray, cursor)
-{
-    var idObject = "";
-    for(let i = 0; i < idObjectArray.length; i++)
-    {
-        if(i == idObjectArray.length -1)
-        {
-            idObject = idObject.concat(cursor) ;
-        }
-        else
-        {
-            idObject = idObject.concat(idObjectArray[i] + '-');
-        }
-    }
-    return idObject;
-}
-//Get the next array object id
-function getNextIdObject(idObjectArray, cursor)
-{
-    var idObject = "";
-    for(let i = 0; i < idObjectArray.length; i++)
-    {
-        if(i == idObjectArray.length -1)
-        {
-            idObject = idObject.concat(parseInt(idObjectArray[i]) + cursor ) ;
-        }
-        else
-        {
-            idObject = idObject.concat(idObjectArray[i] + '-');
-        }
-    }
-    return idObject;
-}
-//Splits a string
-function splitString(string, splitChar)
-{
-    return string.split(splitChar);
-}*/
-
-/*============================================================================
                         Products functions
 ==============================================================================*/
 
 //Functions that ask to server to get productes grid
 async function loadGridProducts()
 {
-    var urlArray = window.location.href.split('/'),
-    category = "",
+    var categoryElem = getUrlSearchElement(),
+    category = _urlParamCategory + _urlParamEquals,
 
     productGrid = $("<div></div>"),
     data,
     //We get html lang attribute to send the correct language code to showSlidePictures() function
     lang = getLangPage();
     //Request creation
+
+    if(_void == categoryElem)
+    {
+        category = _void;
+    }
+    else
+    {
+        category = category.concat(categoryElem);
+    }
+    
     productGrid.attr("class", "productsGrid");
 
-    if(urlArray[urlArray.length - _one] == _void)
-    {
-        urlArray.pop();
-    }
-    category = _urlParamCategory + _urlParamEquals + urlArray.pop();
-    if(_urlIndex.includes(category.split(_urlParamEquals)[_one]))
-    {
-        category = "";
-    }
     //TO DO: make difference between sections keeping in mind the sort variable (date, categories...)
     data = await serverCommunicationSync(_serverGetFunction, _serverRequests + _serverProducts + _urlParamBegin, category);
     if(data != -1)
@@ -661,8 +620,7 @@ async function loadGridProducts()
 
 async function loadProduct()
 {
-    var urlArray = window.location.href.split(_urlSlash),
-    slug = _urlParamSlug +_urlParamEquals + urlArray[urlArray.length - _one];
+    var slug = _urlParamSlug +_urlParamEquals + getUrlSearchElement();
 
     data = await serverCommunicationSync(_serverGetFunction, _serverRequests + _serverProducts + _urlParamBegin, slug);
     data.FILAS.forEach(function(obj)

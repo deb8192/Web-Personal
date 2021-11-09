@@ -7,8 +7,8 @@ RewriteEngine on
 
 # It change the absolute path D:\xampp\htdocs\davidweb\admin\api
 # to the following symbolic path
-RewriteBase /debsdesign/
-# RewriteBase /Web_debora/Web-personal/
+# RewriteBase /debsdesign/
+RewriteBase /Web_debora/Web-personal/
 
 ##################################################
 ############      PRODUCTS RULES     #############

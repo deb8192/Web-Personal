@@ -45,17 +45,31 @@ h1
     margin: 0 10%;
 	padding: 30px 0;
 }
-.prod-h1 {
-    font-size: 2em;
+.prod-h1, .index-h1 {
     color: #FFF;
     background-color: #A00;
     margin: 0;
     padding: 30px 5%;
+    z-index: 1;
+    position: relative;
+}
+.prod-h1{
+    font-size: 2em;
 }
 h2
 {
 	margin: 0 15%;
 	padding: 15px 0;
+    font-size: 1.8em;
+}
+p
+{
+    font-size: 1.2em;
+}
+.normalText
+{
+    margin: 0 10%;
+    padding: 30px 0;
 }
 .productsGrid h3
 {
@@ -81,7 +95,7 @@ a
 {
 	color: black;
 }
-a:hover, button:hover, .preBtn>i:hover, .nextBtn>i:hover
+a:hover, button:hover, .preBtn>i:hover, .nextBtn>i:hover, .dropdown-menu:hover
 {
     color: #F00;
     text-decoration: none;
@@ -90,7 +104,7 @@ a:hover p
 {
     color: initial;
 }
-a, a img, button, .productsGrid article, i
+a, a img, button, .productsGrid article, i, .dropdown-menu, .dropdownList, .menuOption
 {
     transition: .5s;
 	cursor: pointer;
@@ -228,7 +242,7 @@ button, #hdrSrchMobBtn
 }
 .menuOption
 {
-    background-color: #FFF;
+    background-color: transparent;
     display: block;
 }
 
@@ -301,19 +315,23 @@ button, #hdrSrchMobBtn
 #options li
 {
     padding-top: 2em;
-    width: 100%;    
     text-align: left;
 }
 
 
 /* Cuerpo */
 /* Estilo del slider de index.php */
+#indexMainContent
+{
+    z-index: 1;
+}
 .slider_background
 {
 	filter: blur(6px);
     position: absolute;
     max-width: 100%;
     width: 100%;
+    z-index: 0;
 }
 #sliderInicio
 {
@@ -515,6 +533,10 @@ footer div
     nav label
     {
         display: none;
+    }    
+    h2
+    {
+        font-size: 1.5em;
     }
     
     /* Estilo del menú principal */
@@ -561,6 +583,7 @@ footer div
     #options li
     {   
         text-align: center;
+        width: 100%
     }
     #mLateral
     {
@@ -585,6 +608,11 @@ footer div
     {
         margin-top: 30px;
     }
+    .menuOption
+    {
+        background-color: #FFF;
+        width: 100%;
+    }
 	/* Product style */
 	.prodInfo, .paragraphText
 	{
@@ -601,5 +629,12 @@ footer div
     .productsGrid
     {
         padding: 0 10%;
+    }
+}
+@media all and (min-width: 1280px)
+{
+    h2
+    {
+        font-size: 1.8em;
     }
 }

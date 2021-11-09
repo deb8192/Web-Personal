@@ -45,13 +45,13 @@ INSERT INTO Tags (nameID)
 			(67), /*jungla de cristal*/
 			(68), /*el senor de los anillos*/
 			(69), /*esdla*/
-			(70), /*negro*/
-			(71), /*blanco*/
-			(72), /*azul*/
-			(73), /*azul marino*/
-			(74), /*azul eléctrico*/
-			(75), /*violeta*/
-			(76); /*gris*/
+			(120), /*negro*/
+			(121), /*blanco*/
+			(122), /*azul*/
+			(123), /*azul marino*/
+			(124), /*azul eléctrico*/
+			(125), /*violeta*/
+			(126); /*gris*/
 			  
 INSERT INTO TypeCategory (description)
 	VALUES  ("Post"),
@@ -71,7 +71,11 @@ INSERT INTO Titles (spanishTitle, englishTitle, valencianTitle, frenchTitle)
 			("camisetas","tees","","camisetes"),
 			("sudaderas","sweatshirts","",""),
 			("mascarillas","masks","mascaretes","masques"),
+<<<<<<< HEAD
 			("bolsas","bags","","bosses"),
+=======
+			("bolsos","bags","","bosses"),
+>>>>>>> metaSeo
 			("sweters","sweters","",""),
 			("posters","posters","",""),
 			("cuadros","painting","",""),
@@ -198,11 +202,69 @@ INSERT INTO Titles (spanishTitle, englishTitle, valencianTitle, frenchTitle)
 			("violeta","violet","violeta","violet"),
 			("gris","grey","gris","gris");
 
-
-
-
-
-							  
+			/*Meta titles*/
+			("DebsDesign | La mejor web de Merchandising del mundo","","",""),
+			("Tu merchandising favorito al mejor precio | DebsDesign","","",""),
+			("Tus camisetas favoritas al mejor precio | DebsDesign","","",""),
+			("Tus sudaderas favoritas al mejor precio | DebsDesign","","",""),
+			("Tus mascarillas favoritas al mejor precio | DebsDesign","","",""),
+			("Tus bolsas favoritas al mejor precio | DebsDesign","","",""),
+			("Tus sweters favoritos al mejor precio | DebsDesign","","",""),
+			
+			("Tus posters favoritos al mejor precio | DebsDesign","","",""),
+			("Tus cuadros favoritos al mejor precio | DebsDesign","","",""),
+			("Las tiendas que tienen los mejores diseños | DebsDesign","","",""),
+			("Compra en Latostadora tus diseños favoritos | DebsDesign","","",""),
+			("Compra en Pampling tus diseños favoritos | DebsDesign","","",""),
+			("Compra en Qwertee tus diseños favoritos | DebsDesign","","",""),
+			("Compra en Otherees tus diseños favoritos | DebsDesign","","",""),
+			
+			("Compra en Teetee tus diseños favoritos | DebsDesign","","",""),
+			("Compra en Onceuponatee tus diseños favoritos | DebsDesign","","",""),
+			("Compra en Redbubble tus diseños favoritos | DebsDesign","","",""),
+			("Encuentra modelos de ropa con tus diseños favoritos | DebsDesign","","",""),
+			("Modelos para hombre con la mejor gama de diseños | DebsDesign","","",""),
+			("Modelos para mujer con la mejor gama de diseños | DebsDesign","","",""),
+			("Modelos para niños con la mejor gama de diseños | DebsDesign","","",""),
+			
+			("Modelos para bebé con la mejor gama de diseños | DebsDesign","","",""),
+			("Encuentra por temática tu merchandisisng favorito | DebsDesign","","",""),
+			("Merchandising de cine al mejor precio | DebsDesign","","",""),
+			("Merchandising de anime al mejor precio | DebsDesign","","",""),
+			("Merchandising de Disney al mejor precio | DebsDesign","","",""),
+			("Merchandising de Pokemon al mejor precio | DebsDesign","","",""),
+			("Merchandising de Digimon al mejor precio | DebsDesign","","",""),
+			
+			("Merchandising de cartoon al mejor precio | DebsDesign","","",""),
+			("Merchandising de crossover al mejor precio | DebsDesign","","",""),
+			("Merchandising de animales al mejor precio | DebsDesign","","",""),
+			("Merchandising de series al mejor precio | DebsDesign","","",""),
+			("Merchandising de videojuegos al mejor precio | DebsDesign","","",""),
+			
+			/*Product meta titles*/
+			("You shall not infect camiseta hombre azul Latostadora | DebsDesign","","",""),
+			("You shall not infect camiseta mujer azul el&eacute;ctrico Latostadora | DebsDesign","","",""),
+			("You shall not infect mascarilla azul Latostadora | DebsDesign","","",""),			
+			("Always Nintendo camiseta hombre blanca Latostadora | DebsDesign","","",""),		
+			("Always Nintendo camiseta mujer blanca Latostadora | DebsDesign","","",""),
+			
+			("Always Playstation camiseta hombre blanca Latostadora | DebsDesign","","",""),
+			("Always Playstation camiseta mujer blanca Latostadora | DebsDesign","","",""),
+			("The good the bad and the stupid camiseta hombre negra Latostadora | DebsDesign","","",""),
+			("The good the bad and the stupid camiseta hombre azul oscuro Latostadora | DebsDesign","","",""),
+			("The good the bad and the stupid camiseta mujer negra Latostadora | DebsDesign","","",""),
+			
+			("The good the bad and the stupid camiseta mujer no sleeves negra Latostadora | DebsDesign","","",""),
+			("The good the bad and the stupid sweetshirt hombre negra Latostadora | DebsDesign","","",""),
+			("The badges of your life camiseta hombre negra Latostadora | DebsDesign","","",""),
+			("The badges of your life camiseta mujer negra Latostadora | DebsDesign","","",""),
+			("The cresps of your heart camiseta mujer negra Latostadora | DebsDesign","","",""),
+			
+			("The cresps of your heart camiseta hombre negra Latostadora | DebsDesign","","",""),
+			("Catz camiseta hombre negra Latostadora | DebsDesign","","",""),
+			("Catz camiseta mujer negra Latostadora | DebsDesign","","","");
+            
+			
 INSERT INTO Texts (spanishText, englishText, valencianText, frenchText)
 	VALUES	
 			/*Categories*/
@@ -303,6 +365,109 @@ INSERT INTO Texts (spanishText, englishText, valencianText, frenchText)
 			("Camiseta de corte casual azul eléctrico, manga corta y cuello redondo. Confeccionada con tejido 100% algodón orgánico. Gramaje 175 gr/m2. Acabado especial para una mayor suavidad. ."													,"Short sleeve women's electric blue t-shirt with casual fit and round neck. Composed of 100x100 organic cotton. Natural finish for a softer and smoother feel. "								,"Samarreta de tall casual blau elèctric, mániga curta i coll redó. Confeccionada amb teixit 100% cotó orgànic. Gramatge 175 gr/m2. Acabat especial per a una major suavitat."																,"Tee shirt coupe casual bleu électrique, manche courtes et col rond.  Composé exclusivement de coton bio. Grammage 175 gr/m2. Apprêt naturel pour une qualité plus douce et lisse."		  ),
 			("Camiseta de corte regular violeta, manga corta y cuello redondo. Confeccionada con tejido 100% algodón semipeinado, 24/S hilo Ring Spun de calidad superior. Tapacosturas reforzado en el cuello y diseño tubular."						,"Vioelt t-shirt with casual fit and round neck. Composed of 100% cotton semi-combed, 24/S superior quality ring spun yarn. Reinforcing tape at the collar. Tubular design."					,"Samarreta de tall regular violeta, mániga curta i coll redó. Confeccionada amb teixit 100% cotó semipentinat, 24/S fil Ring Spun de qualitat superior. tapacostures reforçat al coll y diseny tubular."									,"Tee shirt coupe casual violet, manche courtes et col rond. Composé 100% de coton semi-peigné, 24/S fil Ringspun de qualité supérieure. Bande de propreté au col. Forme tubulaire."),
 			("Camiseta de corte casual violeta, manga corta y cuello redondo. Confeccionada con tejido 100% algodón orgánico. Gramaje 175 gr/m2. Acabado especial para una mayor suavidad. ."															,"Short sleeve women's violet t-shirt with casual fit and round neck. Composed of 100x100 organic cotton. Natural finish for a softer and smoother feel. "										,"Samarreta de tall casual violeta, mániga curta i coll redó. Confeccionada amb teixit 100% cotó orgànic. Gramatge 175 gr/m2. Acabat especial per a una major suavitat."																	,"Tee shirt coupe casual violet, manche courtes et col rond.  Composé exclusivement de coton bio. Grammage 175 gr/m2. Apprêt naturel pour une qualité plus douce et lisse."		  );
+
+			/*Meta descriptions*/
+			("Compra en DebsDesignWeb el mejor merchandising con diseños originales. Encuentra tus camisetas frikis de anime, cine, videojuegos...  ¿A qué esperas?","","",""),
+			("Encuentra todo el merchandising con diseños originales creados por  DebsDesign. ¡Hazte con todos!","","",""),
+			("Encuentra todas las camisetas con diseños originales creados por  DebsDesign. ¡Hazte con todas!","","",""),
+			("Encuentra todas las sudaderas con diseños originales creados por  DebsDesign. ¡Hazte con todas!","","",""),
+			("Encuentra todas las marscarillas con diseños originales creados por  DebsDesign. ¡Hazte con todas!","","",""),
+			("Encuentra todas las bolsas con diseños originales creados por  DebsDesign. ¡Hazte con todas!","","",""),
+			("Encuentra todos los sweters con diseños originales creados por  DebsDesign. ¡Hazte con todos!","","",""),
+			
+			("Encuentra todos los posters con diseños originales creados por  DebsDesign. ¡Hazte con todos!","","",""),
+			("Encuentra todos los cuadros con diseños originales creados por  DebsDesign. ¡Hazte con todos!","","",""),
+			("Entra a las tiendas donde podrás comprar todos los productos diseñados por DebsDesign. ¡Corre, que vuelan!","","",""),
+			("Compra en Latostadora todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Compra en Pampling todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Compra en Qwertee todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Compra en Otherees todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			
+			("Compra en Teetee todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Compra en Onceuponatee todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Compra en Redbubble todos los diseños originales de su catálogo de DebsDesign. No lo dudes más.","","",""),
+			("Modelos de hombre, modelos de mujer, modelos para niños… Todos los modelos de ropa friki con diseños de DebsDesign los tienes disponbles. Cómpralos ya.","","",""),
+			("Encuentra la ropa de hombre que buscas  con diseños origiales en la web de DebsDesign. ¡Orgullo friki al poder!","","",""),
+			("Encuentra la ropa de mujer que buscas  con diseños origiales en la web de DebsDesign. ¡Orgullo friki al poder!","","",""),
+			("Encuentra la ropa de niños que buscas  con diseños origiales en la web de DebsDesign. ¡Orgullo friki al poder!","","",""),
+			
+			("Encuentra la ropa de bebé que buscas  con diseños origiales en la web de DebsDesign. ¡Orgullo friki al poder!","","",""),
+			("Busca tu temática favorita para encontrar los diseños divertidos que más te gusten. Camisetas frikis, mascarillas divertidas. Todo en DebsDesign.","","",""),
+			("El merchandising de cine más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de anime más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de Disney más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de Pokemon más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de Digimon más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			
+			("El merchandising de cartoon más chulo del mundo sólo lo encontrarás disponible en la web de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de crossovers más chulo del mundo sólo lo encontrarás disponible en la web de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de animales más chulo del mundo sólo lo encontrarás disponible en la web de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de series más chulo del mundo sólo lo encontrarás disponible en la web de DebsDesign. Si lo quieres, es tuyo.","","",""),
+			("El merchandising de videojuegos más chulo del mundo sólo lo encontrarás disponible en la weg de DebsDesign. Si lo quieres, es tuyo.","","","");
+
+			/*Product meta titles*/
+			("Comprar You shall not infect camiseta hombre azul Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar You shall not infect camiseta mujer azul el&eacute;ctrico Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar You shall not infect mascarilla azul Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),			
+			("Comprar Always Nintendo camiseta hombre blanca Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),		
+			("Comprar Always Nintendo camiseta mujer blanca Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			
+			("Comprar Always Playstation camiseta hombre blanca Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar Always Playstation camiseta mujer blanca Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The good the bad and the stupid camiseta hombre negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The good the bad and the stupid camiseta hombre azul oscuro Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The good the bad and the stupid camiseta mujer negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+		
+			("Comprar The good the bad and the stupid camiseta mujer no sleeves negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The good the bad and the stupid sweetshirt hombre negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The badges of your life camiseta hombre negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The badges of your life camiseta mujer negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar The cresps of your heart camiseta mujer negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+		
+			("Comprar The cresps of your heart camiseta hombre negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar Catz camiseta hombre negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","",""),
+			("Comprar Catz camiseta mujer negra Latostadora al mejor precio en la mejor tienda | DebsDesign","","","");
+	
+INSERT INTO Articles (spanishArt, englishArt, valencianArt, frenchArt)
+	VALUES	
+			/*Textos de las paginas*/
+			("¿Necesitas renovar tu fondo de armario, buscas algún diseño original para decorar tu habitación o, simplemente, te apetece comprar algún artículo de merchandising con el que fardar con tus amigos? Entonces estás en el sitio correcto. <strong class=\"bold\">En DebsDesign podrás comprar el mejor merchandising friki online con diseños originales a un precio inmejorable</strong>.</br></br> No sientas vergüenza, saca con orgullo tu lado más friki y <strong class=\"bold\">compra en DebsDesing los productos con los estampados que más molan.</strong> ¿A qué esperas?","","",""),
+			("<strong class=\"bold\">¿Buscas comprar camisetas frikis?</strong> Pues entonces esta es tu sección. Disfruta de los últimos diseños de camisetas que han llegado a la web DebsDesign y compra el que más te guste. <b class=\"bold\">Accede a cada producto para ver su detalle y entrar a la sección de compra.</b> Y ya sabes, si te gustan y los necesitas, date el capricho.","","",""),
+			("<strong class=\"bold\">Si lo que quieres es comprar sudaderas de diseño originales</strong>, te puedo decir que has tenido suerte llegando hasta aquí. <b class=\"bold\">En DebsDesign tenemos un catálogo de sudaderas de diseño para todos los públicos.</b> Echa un vistazo a los productos que hay a continuación y escoge el que más te guste. No lo dudes más.","","",""),
+			("<b class=\"bold\">Las <strong class=\"bold\">mascarillas</strong> se han convertido en un complemento obligatorio de nuestra vida cotidiana.</b> Por esa razón, no está de más llevar mascarillas divertidas que den un poco de color y alegría al panorama actual. Puedes echar un vistazo a las mascarillas que tenemos disponibles en DebsDesign. Complementa tu estilo con un toque original.","","",""),
+			("<b class=\"bold\">Si lo que te mola son las bolsos con <strong class=\"bold\">estampados divertidos</strong></b>, mira el catálogo que te presentamos a continuación. Podrás <strong class=\"bold\">comprar bolsos de diseño con los estampados más chulos que hay disponibles ahora mismo en todo internet</strong>. ¿No te lo crees? Sólo tienes que hacer un poco de scroll. Seguro que encuentras alguno que te gusta.","","",""),
+			("<strong class=\"bold\">La gama de sweters de DebsDesign</strong> no tiene nada que envidiar a la de las otras webs de <strong>comprar ropa online</strong>. <b class=\"bold\">Son las mejores prendas para la época en la que empieza a refrescar pero, si además le añades un diseño molón, se convertirá en la prenda de ropa perfecta</b>. Hazte con tu sweter friki y enséñaselo a tus amigos.","","",""),
+			("Los posters decorativos siempre son una buena opción para dar color a tu cuarto o a tu casa. Si además son posters divertidos y molones, ya no hay más que decir. En esta sección <strong class=\"bold\">podrás comprar posters de anime o de la temática que prefieras a precios muy competitivos.</strong> No te lo pienses. Llena esa pared vacía de tu habitación con los mejores posters originales, <strong class=\"bold\">los de DebsDesign.</strong>","","",""),
+			("<strong class=\"bold\">Comprar cuadros originales</strong> siempre ha sido una opción muy elegante para vestir una habitación. <strong class=\"bold\">En DebsDesign</strong> nos encanta hacer diseños joviales para todos los gustos que definan el estilo del usuario. En esta web podrás encontrar cuadros de distintos tamaños, estilos y colores. Si quieres darle un toque diferente y original a tu cuarto, hazte con los cuadros más chulos del mercado aquí, en la web DebsDesign.","","",""),
+			("Latostadora es una tienda online de ropa y merchandising friki de España. En esta sección de la web encontrarás todos los productos de merchandising diseñados por DebsDesign que se encuentran disponibles en la tienda de ropa friki Latostadora. <strong class=\"bold\">Aquí podrás comprar camisetas de Latostadora, sudaderas, mascarillas y muchos productos más de merchandising oficial de Latostadora</strong>. Elige tu artículo sin dudar.","","",""),
+			("Pampling es la tienda online de ropa y merchandisign friki más conocida de España. <strong class=\"bold\">Entra y echa un vistazo a todas las camisetas frikis de Pampling diseñadas por DebsDesign</strong>. Accede en esta sección al detalle de cada producto y entra directamente desde ahí a comprarlo en Pampling. Cómpralos antes de que se acaben.","","",""),
+			("Qwertee es una tienda de camisetas frikis irlandesa que vende su merchandising en toda Europa. <strong class=\"bold\">Algunos de los diseños de DebsDesing se encuentran disponibles para comprar en Qwertee. Hazte con el merchandising oficial de Qwertee diseñado por DebsDesign al mejor precio y en apenas dos clicks</strong>. ¿A qué esperas?","","",""),
+			("Othertees es una tienda ubicada en Polonia donde puedes comprar una gran cantidad de camisetas divertidas y originales. Entre su variedad destacan, como era de esperar, los diseños de DebsDesign. <strong class=\"bold\">Adquiere tu merchandising de Othertees de la firma DebsDesign</strong>, no te arrepentiras.","","",""),
+			("TeeTee es una tienda online de ropa friki con se de en Italia. En ella también se encuentran disponibles los productos del catálogo de DebsDesign que puedes encontrar a continuación. <strong class=\"bold\">Desde la web de DebsDesign tendrás acceso a comprar nuestras camisetas y nuestro merchandising friki disponible en TeeTee</strong>. Escoge tu artículo favorito y hazte con él en TeeTee.","","",""),
+			("Onceuponatee es una tienda estadounidense de para comprar camisetas geek. DebsDesign web no quiere privar a ninguna persona del mundo en la obtención de sus diseños. Es por eso que si deseas <strong class=\"bold\">comprar playeras originales y divertidas de DebsDesign</strong> y vives en América, también hay productos para ti <strong class=\"bold\">en Onceuponatee</strong>. No te resistas, accede a nuestro catálogo y compra tu camiseta estapada favorita.","","",""),
+			("<strong class=\"bold\">Redbubble es una tienda</strong> ubicada en Merlburne, Australia, <strong class=\"bold\">para merchandising friki online</strong> desde cualquier parte del mundo. <strong class=\"bold\">Muchos de los diseños de DebsDesign que más te gustan se encuentran disponibles para comprar en Redbubble:</strong> camisetas de Redbubble, relojes de pared de Redbubble, tazas originales de RedBubble. <strong class=\"bold\">Accede a la tienda online Redbubble desde el catálogo de productos de DebsDesign.</strong> Y ya sabes, si te gusta lo que ves y se adapta a tus necesidades, cómpralo sin remordimientos.","","",""),
+			("Si deseas <strong class=\"bold\">comprar camisetas de hombre, sudaderas, complementos o, en general, cualquier artículo másculino con diseños originales y divertidos, DebsDesign es tu web</strong>. Elige el producto que más te guste del catálogo que se muestra a continuación y <strong class=\"bold\">adquiérelo al mejor precio</strong>. Saca tu orgullo friki en DebsDesign.","","",""),
+			("Si deseas <strong class=\"bold\">comprar camisetas de mujer, sudaderas, bolsos, complementos o, en general, cualquier artículo femenino con diseños originales y divertidos, DebsDesign es tu web</strong>. Elige el producto que más te guste del catálogo que se muestra a continuación y <strong class=\"bold\">adquiérelo al mejor precio</strong>. Saca tu orgullo friki en DebsDesign.","","",""),
+			("Para todos aquellos padres frikis que desean que sus hijos sigan sus pasos, en DebsDesign también podrás comprar mechandising para niños. <strong class=\"bold\">Compra camisetas unisex para niños y demás ropa para ellos con diseños originales creados de la mano de DebsDesign</strong>. Los precios son inmejorables y los estampados muy frikis. <strong class=\"bold\">Lleva a tu hijo por el sendero del lado friki comprando en DebsDesign</strong> y enséñale a sentir el orgullo.","","",""),
+			("Qué mejor manera de vestir a tu bebé que comprando la mejor ropa estampada friki de la web. En DebsDesign también creemos que los más pequeños de la casa tienen derecho a vestir como unos verdaderos frikis y es que, ya se sabe, los frikis heredaremos la tierra. <strong class=\"bold\">Compra la ropa de bebé más divertida en la web de DebsDesign</strong>. Orgullo friki desde la cuna.","","",""),
+			("¿Eres cinéfilo? <strong class=\"bold\">¿Buscas merchandising original basado clásicos del cine?</strong> Si es así, estás en la sección correcta de DebsDesign. <strong class=\"bold\">Compra merchandising de tus películas preferidas</strong> y enseñaselas a tus colegas para que se mueran de la envidia. No, mejor, para que les des la oportunidad de comprarlas también aquí, <strong class=\"bold\"> DebsDesign.</strong>","","",""),
+			("Te gusta el anime, ¿verdad? Como es obvio y obligatorio, una tienda de merchandisign friki que se precie no puede considerarse como tal si no tiene diseños de <strong class=\"bold\">camisetas y merchandising basados en los animes más famosos</strong>. Si lo que buscas es <strong class=\"bold\">comprar merchandising de anime</strong>, esta sección está pensada para ti. No te lo pienses, compra las camisetas online más chulas <strong class=\"bold\">de DebsDesign</strong> y de todo internet.","","",""),
+			("Si eres amante de Disney, también tenemos productos para ti. <strong class=\"bold\">Compra el mejor merchandising Disney</strong> en esta sección. Tus princesas y personajes favoritos Disney <strong class=\"bold\">diseñados de la mano de DebsDesign</strong>. No te arrepentiras de tu compra.","","",""),
+			("Si eres fan de Pokemon, el mejor merchandising se encuentra en DebsDesign. Explora y <strong class=\"bold\">compra todas las camisetas</strong> de Pokemon. <b class=\"bold\">Y</b> no sólo camisetas. En esta sección de la web podrás encontra <strong class=\"bold\">todo el merchandising de Pokemon que tenemos disponible DebsDesign</strong>. ¡Hazte con todos!","","",""),
+			("Digimon merece una sección para sí solo. ¿A quién no le ha marcado la infancia esta saga de series de anime? A nosotros sí, desde luego. <strong class=\"bold\">Compra en esta sección de DebsDesign las mejores camisetas y el mejor merchandising de Digimon a un precio inmejorable</strong>. Revive tu infancia con tus diseños favoritos. Aquí, en DebsDesign.","","",""),
+			("Para los fans del cartoon también tenemos diseños divertidos. <strong class=\"bold\">Encuentra en esta sección de la web de DebsDesign los diseños de tus series cartoon preferidas</stront> y revive tu infancia y tus mejores recuerdos con estos geniales productos. ¿Te gustan? Cómpralos.","","",""),
+			("¿A quién no le gustan los crossovers? A nosotros sí. Juntar a tus personajes favoritos de distintas series, videojuegos o películas siempre es algo que a todo el mundo le ha hecho ilusión. <strong class=\"bold\">En esta sección podrás comprar ropa de diseño con las ilustraciones de los mejores crossovers que pueden exisitir.</strong> ¿A qué esperas?","","",""),
+			("En DebsDesign tenemos debilidad por los animales y eso debe notarse. <strong class=\"bold\">En esta sección podrás encontrar merchandising de animales monos y divertidos a buen precio.</strong> Saca tu lado mas mono o salvaje según te sientas vistiendo con las prendas de ropa de DebsDesign. Todo el mundo se quedará mirando a tu camiseta.","","",""),
+			("Si eres seriéfilo, esta es tu sección. <strong class=\"bold\">Compra el merchandising de tus series favoritas</strong>, de esas series que marcaron un antes y un después en tu vida o, incluso, en la historia. <strong class=\"bold\">Aquí, en DebsDesign.</strong>","","",""),
+			("No podía ser menos. DebsDesign también tiene una sección de videojuegos para vender merchandising friki a todos esos orgullosos de su forma de ser y de ver la vida. Encuentra y <strong class=\"bold\">compra en esta sección el mejor merchandisign de videojuegos diseñado de la mano de DebsDesign</strong>. No te arrepentirás, te lo podemos asegurar.","","",""),
+			("El coronavirus ha venido para quedarse pero los fans de ESDLA no tenemos nada que temer con este diseño. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">You shall not infect</i> de hombre de color negro inspirada en <i class=\"italic\">El Señor de los Anillos</i></stong> para protegerte frente al coronavirus. Con la magia del gran mago Gandalf los virus no pueden pasar. Accede a Latostadora para obtenerla. Accede a Latostadora para obtenerla pulsando el botón \"Ver en tienda\".","","",""),
+			("El coronavirus ha venido para quedarse pero los fans de ESDLA no tenemos nada que temer con este diseño. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">You shall not infect</i> de mujer de color negro inspirada en <i class=\"italic\">El Señor de los Anillos</i></strong> para protegerte frente al coronavirus. Con la magia del gran mago Gandalf, los virus no pueden pasar. Accede a Latostadora para obtenerla. Accede a Latostadora para obtenerla pulsando el botón \"Ver en tienda\".","","",""),
+			("<b class=\"bold\">Si eres fan del cine de acción y del indestructible <strong class=\"bold\">John Mcclane</strong></b>, <strong class=\"bold\">tienes que comprar esta camiseta inspirada en <i class=\"italic\">Die Hard</i></strong>. Bueno, seamos correctos, <strong class=\"bold\">en España</strong> es la mitiquísima <strong class=\"bold\"><i class=\"italic\">Jungla de Cristal</i></strong>. Una prenda insipirada en un clásico del cine con un toque de El bueno, el feo y el malo que todo forofo del cine de acción debe poseer. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The good, the bad and the stupid de hombre de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\".","","",""),
+			("<b class=\"bold\">Si eres fan del cine de acción y del indestructible <strong class=\"bold\">John Mcclane</strong></b>, <strong class=\"bold\">tienes que comprar esta camiseta inspirada en <i class=\"italic\">Die Hard</i></strong>. Bueno, seamos correctos, <strong class=\"bold\">en España</strong> es la mitiquísima <strong class=\"bold\"><i class=\"italic\">Jungla de Cristal</i></strong>. Una prenda insipirada en un clásico del cine con un toque de El bueno, el feo y el malo que todo forofo del cine de acción debe poseer. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The good, the bad and the stupid de mujer de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\".","","",""),
+			("<b class=\"bold\">Todo fan de <strong class=\"bold\">Pokemon</strong> debe poseer esta camiseta con las medallas de la región de Kanto</b>. Una representación de las medallas de cada uno de los gimnasios Pokemon de la región mostrando el poder de cada uno de los elementos que simbolizan. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The badges of your life</i> de hombre de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\".","","",""),
+			("<b class=\"bold\">Todo fan de <strong class=\"bold\">Pokemon</strong> debe poseer esta camiseta con las medallas de la región de Kanto</b>. Una representación de las medallas de cada uno de los gimnasios Pokemon de la región mostrando el poder de cada uno de los elementos que simbolizan. <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The badges of your life</i> de mujer de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\".","","",""),
+			("El poder de los digivices y de los emblemas de los 8 niños elegidos en una camiseta tan colorida como nostálgica. <b class=\"bold\">Todo fan de <strong class=\"bold\">digimon</strong> que se precie debe tener este maravilloso diseño.</b> <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The cresps of your heart</i> de hombre de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\". ","","",""),
+			("El poder de los digivices y de los emblemas de los 8 niños elegidos en una camiseta tan colorida como nostálgica. <b class=\"bold\">Todo fan de <strong class=\"bold\">digimon</strong> que se precie debe tener este maravilloso diseño.</b> <strong class=\"bold\">Compra tu camiseta <i class=\"italic\">The cresps of your heart</i> de mujer de color negro en Latostadora</strong>. Accede a la tienda pulsando el botón \"Ver en tienda\". ","","","");
 
 
 --El Slug se va a hacer sustituyendo los ' ' por '-', las 'MAYUS' por 'minus' y los caracteres raros por sus homólogos ASCII 			
@@ -871,24 +1036,24 @@ INSERT INTO Product (titleID, link, descriptionID, price, discount, discountPerc
 			
 ALTER TABLE Product ADD COLUMN slug VARCHAR(50);
 
-UPDATE Product SET slug = "You-shall-not-infect_tees_man_blue" WHERE id = 1;
-UPDATE Product SET slug = "You-shall-not-infect_tees_woman_electric-blue" WHERE id = 2;
-UPDATE Product SET slug = "You-shall-not-infect_masks_blue" WHERE id = 3;				
-UPDATE Product SET slug = "Always-Nintendo_tees_man_white" WHERE id = 4;			
-UPDATE Product SET slug = "Always-Nintendo_tees_woman_white" WHERE id = 5;
-UPDATE Product SET slug = "Always-Playstation_tees_man_white" WHERE id = 6;
-UPDATE Product SET slug = "Always-Playstation_tees_woman_white" WHERE id = 7;
-UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_tees_man_black" WHERE id = 8;
-UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_tees_man_dark-blue" WHERE id = 9;
-UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_tees_woman_black" WHERE id = 10;
-UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_tees_woman-no-sleeves_black" WHERE id = 11;
-UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_sweetshirt_man_black" WHERE id = 12;
-UPDATE Product SET slug = "The-badges-of-your-life_tees_man_black" WHERE id = 13;
-UPDATE Product SET slug = "The-badges-of-your-life_tees_woman_black" WHERE id = 14;
-UPDATE Product SET slug = "The-cresps-of-your-heart_tees_woman_black" WHERE id = 15;
-UPDATE Product SET slug = "The-cresps-of-your-heart_tees_man_black" WHERE id = 16;
-UPDATE Product SET slug = "Catz_tees_man_black" WHERE id = 17;
-UPDATE Product SET slug = "Catz_tees_woman_black" WHERE id = 18;
+UPDATE Product SET slug = "You-shall-not-infect_camiseta_hombre_azul_latostadora" WHERE id = 1;
+UPDATE Product SET slug = "You-shall-not-infect_camiseta_mujer_azul-electrico_latostadora" WHERE id = 2;
+UPDATE Product SET slug = "You-shall-not-infect_mascarilla_azul_latostadora" WHERE id = 3;				
+UPDATE Product SET slug = "Always-Nintendo_camiseta_hombre_blanca_latostadora" WHERE id = 4;			
+UPDATE Product SET slug = "Always-Nintendo_camiseta_mujer_blanca_latostadora" WHERE id = 5;
+UPDATE Product SET slug = "Always-Playstation_camiseta_hombre_blanca_latostadora" WHERE id = 6;
+UPDATE Product SET slug = "Always-Playstation_camiseta_mujer_blanca_latostadora" WHERE id = 7;
+UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_camiseta_hombre_negra_latostadora" WHERE id = 8;
+UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_camiseta_hombre_azul-oscuro_latostadora" WHERE id = 9;
+UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_camiseta_mujer_negra_latostadora" WHERE id = 10;
+UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_camiseta_mujer-sin-mangas_negra_latostadora" WHERE id = 11;
+UPDATE Product SET slug = "The-good-the-bad-and-the-stupid_sudadera_hombre_negra_latostadora" WHERE id = 12;
+UPDATE Product SET slug = "The-badges-of-your-life_camiseta_hombre_negra_latostadora" WHERE id = 13;
+UPDATE Product SET slug = "The-badges-of-your-life_camiseta_mujer_negra_latostadora" WHERE id = 14;
+UPDATE Product SET slug = "The-cresps-of-your-heart_camiseta_mujer_negra_latostadora" WHERE id = 15;
+UPDATE Product SET slug = "The-cresps-of-your-heart_camiseta_hombre_negra_latostadora" WHERE id = 16;
+UPDATE Product SET slug = "Catz_camiseta_hombre_negra_latostadora" WHERE id = 17;
+UPDATE Product SET slug = "Catz_camiseta_mujer_negra_latostadora" WHERE id = 18;
 	
 			
 INSERT INTO Merchandising (prodID, shop, color, modelo, tematica)
@@ -967,4 +1132,113 @@ INSERT INTO ProdPortrait (prodID, imgID)
 			(15, 48),
 			(16, 174),
 			(17, 49),
-            (18, 175);       
+            (18, 175);    
+
+/*********************		  META	 		*******************/
+
+INSERT INTO Metadata (title, description, robotIndex, robotFollow, catId, prodId)
+	VALUES 	(127, 92,  1, 1, 0,  null),
+			(128, 93,  1, 1, 1,  null),
+			(129, 94,  1, 1, 8,  null),
+			(130, 95,  1, 1, 9,  null),
+			(131, 96,  1, 1, 35, null),
+			(132, 97,  1, 1, 10, null),
+			(133, 98,  1, 1, 11, null),
+								 
+			(134, 99,  1, 1, 12, null),
+			(135, 100, 1, 1, 13, null),
+			(136, 101, 1, 1, 2,  null),
+			(137, 102, 1, 1, 14, null),
+			(138, 103, 1, 1, 15, null),
+			(139, 104, 1, 1, 16, null),
+			(140, 105, 1, 1, 17, null),
+								 
+			(141, 106, 1, 1, 18, null),
+			(142, 107, 1, 1, 19, null),
+			(143, 108, 1, 1, 20, null),
+			(144, 109, 1, 1, 3,  null),
+			(145, 110, 1, 1, 21, null),
+			(146, 111, 1, 1, 22, null),
+			(147, 112, 1, 1, 23, null),
+								 
+			(148, 113, 1, 1, 24, null),
+			(149, 114, 1, 1, 4,  null),
+			(150, 115, 1, 1, 30, null),
+			(151, 116, 1, 1, 25, null),
+			(152, 117, 1, 1, 26, null),
+			(153, 118, 1, 1, 28, null),
+			(154, 119, 1, 1, 27, null),
+								 
+			(155, 120, 1, 1, 34, null),
+			(156, 121, 1, 1, 33, null),
+			(157, 122, 1, 1, 32, null),
+			(158, 123, 1, 1, 29, null),
+			(159, 124, 1, 1, 31, null),
+			
+			(160, 125, 1, 1, null, 1),
+			(161, 126, 1, 1, null, 2),
+			(162, 127, 1, 1, null, 3),
+			(163, 128, 1, 1, null, 4),
+			(164, 129, 1, 1, null, 5),
+			(165, 130, 1, 1, null, 6),
+			(166, 131, 1, 1, null, 7),
+								   
+			(167, 132, 1, 1, null, 8),
+			(168, 133, 1, 1, null, 9),
+			(169, 134, 1, 1, null, 10),
+			(170, 135, 1, 1, null, 11),
+			(171, 136, 1, 1, null, 12),
+			(172, 137, 1, 1, null, 13),
+			(173, 138, 1, 1, null, 14),
+								   
+			(174, 139, 1, 1, null, 15),
+			(175, 140, 1, 1, null, 16),
+			(176, 141, 1, 1, null, 17),
+			(177, 142, 1, 1, null, 18);
+			   
+           /*********************		  WEB TEXTS	 		*******************/
+
+INSERT INTO WebTexts (webText, catId, prodId, textOrder)
+	VALUES 	(1,   0,  null, 1),
+			(2,   8,  null, 1),
+			(3,   9,  null, 1),
+			(4,   35, null, 1),
+			(5,   10, null, 1),
+			(6,   11, null, 1),
+			(7,   12, null, 1),
+						  
+			(8,   13, null, 1),
+			(9,   14, null, 1),
+			(10,  15, null, 1),
+			(11,  16, null, 1),
+			(12,  17, null, 1),
+			(13,  18, null, 1),
+			(14,  19, null, 1),
+						  
+			(15,  20, null, 1),
+			(16,  21, null, 1),
+			(17,  22, null, 1),
+			(18,  23, null, 1),
+			(19,  24, null, 1),
+			(20,  30, null, 1),
+			(21,  25, null, 1),
+						  
+			(22,  26, null, 1),
+			(23,  28, null, 1),
+			(24,  27, null, 1),
+			(25,  34, null, 1),
+			(26,  33, null, 1),
+			(27,  32, null, 1),
+			(28,  29, null, 1),
+						  
+			(29,  31, null, 1),
+			(30, null, 1,   1),
+			(31, null, 2,   1),
+			(32, null, 8,   1),
+			(33, null, 10,  1),
+			(34, null, 13,  1),
+			(35, null, 14,  1),
+			(36, null, 16,  1),
+			(37, null, 15,  1);
+			   
+           

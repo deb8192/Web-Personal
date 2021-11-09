@@ -36,11 +36,9 @@
     
     <html lang="<?php echo $lang[0]; ?>">
         <head>
-            <title><?php echo $title; ?></title>
+            <title></title>
             <meta charset="utf-8">
             <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-            <meta name="description" content="<?php echo $description; ?>">
-            <meta name="keywords" content="<?php echo $keywords; ?>">
             <link rel = "stylesheet" href="<?php echo $index; ?>css/style.css?v=2">
             <link rel = "stylesheet" href="<?php echo $index; ?>css/debsDesignCol.css">
             <link rel = "stylesheet" href="<?php echo $index; ?>media/img/web-icons/flaticons/flaticon.css">

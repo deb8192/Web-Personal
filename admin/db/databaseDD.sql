@@ -271,10 +271,6 @@ CREATE TABLE Merchandising
 	FOREIGN KEY(prodID) REFERENCES Product(id) 
         ON DELETE CASCADE
         ON UPDATE CASCADE,	
-
-	FOREIGN KEY(shop) REFERENCES Tags(id) 
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
 		
 	FOREIGN KEY(color) REFERENCES Tags(id) 
         ON DELETE CASCADE
@@ -504,5 +500,72 @@ CREATE TABLE Titles
 	frenchTitle VARCHAR (60),
 	
 	PRIMARY KEY (id)
+	
+)ENGINE = innodb;
+
+
+/********************************************
+********** 	 Metadata features 	 ************
+********************************************/
+
+CREATE TABLE Metadata
+(
+	id INT UNSIGNED AUTO_INCREMENT,
+	title INT UNSIGNED NOT NULL,
+	description INT UNSIGNED NOT NULL,
+	robotIndex BOOLEAN DEFAULT TRUE,
+	robotFollow BOOLEAN DEFAULT TRUE,
+	catId INT UNSIGNED,
+	prodId INT UNSIGNED,
+	
+	PRIMARY KEY (id),
+	
+	UNIQUE (catId, prodId),
+	
+	FOREIGN KEY (title) REFERENCES Titles (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+				
+	FOREIGN KEY (description) REFERENCES Texts (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	
+	FOREIGN KEY (catId) REFERENCES Categories (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+				
+	FOREIGN KEY (prodId) REFERENCES Product (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	
+)ENGINE = innodb;
+
+/********************************************
+********** 	 Web texts 	 ************
+********************************************/
+
+CREATE TABLE WebTexts
+(
+	id INT UNSIGNED AUTO_INCREMENT,
+	webText INT UNSIGNED NOT NULL,
+	catId INT UNSIGNED,
+	prodId INT UNSIGNED,
+	textOrder INT UNSIGNED,
+	
+	PRIMARY KEY (id),
+	
+	UNIQUE (catId, prodId, textOrder),
+				
+	FOREIGN KEY (webText) REFERENCES Articles (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	
+	FOREIGN KEY (catId) REFERENCES Categories (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+				
+	FOREIGN KEY (prodId) REFERENCES Product (id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
 	
 )ENGINE = innodb;
