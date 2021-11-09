@@ -4,11 +4,11 @@
     position: relative;
 	display: flex;
 }
-.row-3-cent-col
+.row-3-cent-col, .row-2-left-col
 {
     position: relative;
 }
-.row-3-cent-col .responsive-inline-elements
+.row-3-cent-col .responsive-inline-elements, .row-2-left-col .responsive-inline-elements
 {
     display: block;
 }
@@ -19,8 +19,83 @@
 {
     width: 100%;
 }
+/* Invisible elements */
+.mediano
+{
+	display: none;
+}
+.grande
+{
+	display: none;
+}
+/* visible elements */
+.pequenyo
+{
+	display: block;
+}
+
+
+/* Drop down lists levels */
+.dropDown-lv1
+{
+	margin-left: 15%;
+}
+.dropDown-lv2
+{
+	margin: 0 0 0 5%;
+}
+.dropDown-lv3
+{
+	margin: 0 0 0 10%;
+}
+
+/* Slider elements */
+.sliderContent
+{
+    height: 100%;
+    padding: 5%;
+    background-color: rgba(75, 75, 75, .75);
+    color: #fff;
+}
+.sliderContent h2, .sliderContent p
+{
+    padding: 0 5% 15px 5%;
+    text-align: center;
+    margin: 0;
+}
+.slider_background, .bGSliderBig   
+{
+    display: none;
+}
+.sliderButton 
+{    
+    margin: 15px auto;
+}
+@media all and (min-width: 640px)
+{
+	/* Es visible a partir de 640px */
+	.mediano
+	{
+		display: block;
+	}
+    /* Slider elements */
+    .sliderButton 
+    {    
+        margin: 15px auto;
+    }
+}
 @media all and (min-width: 960px)
 {
+	/* Es invisible a partir de 960px */
+	.mediano
+	{
+		display: none;
+	}
+	/* Es visible a partir de 960px */
+	.grande
+	{
+		display: block;
+	}
     /* 3 columns: L & R 20% and center col 60% */
     .row-3-cent-col
     {
@@ -54,5 +129,48 @@
     .row-2-left-col>.col-2
     {
         width: 40%;
+    }
+    
+    /* Drop down lists levels */
+    .dropDown-lv1
+    {
+        margin-left: auto;
+    }
+    /* Slider elements */
+    .sliderInfo
+    {
+        height: 100%;
+        position: absolute;
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 93.06122%;
+        max-width: 1280px;
+    }
+    .sliderContentLeft
+    {        
+        display: table;
+        max-width: 50%;
+        height: 100%;
+    }
+    .sliderContentColumn
+    {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    .sliderContent
+    {
+        padding: 20px 10%;
+        margin: 25px;
+        max-height: 275px;
+    }
+    .slider_background, .bGSliderBig
+    {
+        display: initial;
+    }    
+    .bGSliderSmall
+    {
+        display: none;
     }
 }

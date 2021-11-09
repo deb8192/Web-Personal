@@ -1,13 +1,23 @@
 /* Genérico */
 
+html
+{
+	box-sizing: border-box;
+}
 html, #latestProducts
 {	
     background-color: #d9d9d9;
 	font-family: 'Franklin Gothic Regular';
 }
+#merchandisingProd
+{
+    padding-right: 0;
+    padding-left: 0;
+}
 body
 {
 	margin: 0;
+    color: black;
 }
 ul
 {
@@ -18,7 +28,6 @@ ul
 	margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
 }
 header
 {
@@ -36,14 +45,31 @@ h1
     margin: 0 10%;
 	padding: 30px 0;
 }
-.prod-h1
-{
+.prod-h1, .index-h1 {
+    color: #FFF;
+    background-color: #A00;
+    margin: 0;
+    padding: 30px 5%;
+    z-index: 1;
+    position: relative;
+}
+.prod-h1{
     font-size: 2em;
 }
 h2
 {
 	margin: 0 15%;
 	padding: 15px 0;
+    font-size: 1.8em;
+}
+p
+{
+    font-size: 1.2em;
+}
+.normalText
+{
+    margin: 0 10%;
+    padding: 30px 0;
 }
 .productsGrid h3
 {
@@ -54,16 +80,31 @@ h2
     width: 80%;
     font-weight: normal;
 }
+.prodInfo
+{
+    font-size: 1.5em;
+	margin: 0;
+}
+.paragraphText
+{
+	font-size: 1em;
+	text-align: left;
+	margin: 0;
+}
 a
 {
 	color: black;
 }
-a:hover, button:hover, .preBtn>i:hover, .nextBtn>i:hover
+a:hover, button:hover, .preBtn>i:hover, .nextBtn>i:hover, .dropdown-menu:hover
 {
     color: #F00;
     text-decoration: none;
 }
-a, img, button, .productsGrid article, i
+a:hover p
+{
+    color: initial;
+}
+a, a img, button, .productsGrid article, i, .dropdown-menu, .dropdownList, .menuOption
 {
     transition: .5s;
 	cursor: pointer;
@@ -73,6 +114,33 @@ a, img, button, .productsGrid article, i
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.actionButton
+{
+    background-color: #A00;
+    color: #fff;
+    padding: 20px;
+    border-radius: .25em;
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 15px 10%;
+    margin: 15px auto;
+    font-size: 1.25em;
+}
+.paragraphText .actionButton
+{
+    display: initial;
+}
+.actionButton:hover
+{
+    background-color: #F00;
+}
+a.actionButton:hover,
+button.actionButton:hover
+{
+    color: #fff;
+    background-color: #F00;
+}
 /************ Header *************/
 #headerSearch {
     display: none;
@@ -92,7 +160,7 @@ header, #headerSearchPhone, #indexMainContent
     position: absolute;
     width: 50px;
     height: 50px;
-    transform: translateY(-375px);
+    top: 30px;
     right: 20px;
 }
 nav
@@ -114,13 +182,29 @@ nav
 .logo>img {
     margin: 20px 30%;
     display: block;
-    max-width: 100%;
     max-height: 60px;
 }
-.logo span a:hover, #langFlags button img:hover, .productsGrid article:hover
+#langFlags button img:hover
 {
-    transform: scale(1.3);
+    transform: scale(1.2);
     z-index: 1;
+}
+
+.productsGrid article:hover
+{
+    z-index: 1;
+}
+
+.logo:hover
+{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.productsGrid article:hover
+{
+	border: 3px solid #A00;
+    box-shadow: 0 5px 5px 5px rgb(0 0 0 / 40%);
 }
 
 .top-img
@@ -150,11 +234,16 @@ nav
 {
     padding: 5px;
 }
-#langFlags button, #hdrSrchMobBtn
+button, #hdrSrchMobBtn
 {
     border: none;
     background-color: transparent;
     margin: 0;
+}
+.menuOption
+{
+    background-color: transparent;
+    display: block;
 }
 
 #mainMenu
@@ -191,7 +280,7 @@ nav
 {
     padding: .5em 2em;
 }
-#options, #langFlags
+#mainMenu div:not(:first-child)
 {
     transition: left .5s, background-color .5s ease-out .2s;
     transition-delay: 0s;
@@ -219,23 +308,34 @@ nav
 {
     display: flex;
 }
+#options
+{
+    padding-bottom: 20px;
+}
 #options li
 {
-    padding: 1em 0;
+    padding-top: 2em;
+    text-align: left;
 }
 
 
 /* Cuerpo */
 /* Estilo del slider de index.php */
+#indexMainContent
+{
+    z-index: 1;
+}
 .slider_background
 {
 	filter: blur(6px);
     position: absolute;
     max-width: 100%;
+    width: 100%;
+    z-index: 0;
 }
 #sliderInicio
 {
-	background-color: #000;
+	background-color: #d9d9d9;
 }
 .slider_picture
 {
@@ -253,7 +353,15 @@ nav
 /* Estilo de la seccion principal de las paginas normales */
 .mainContent
 {
-	padding: 100px 10% 0 10%;
+	padding: 100px 5% 50px 5%;
+}
+.productData
+{
+	padding: 0;
+}
+.productData img
+{
+	max-width: 100%;
 }
 main, section
 {
@@ -267,9 +375,8 @@ main, section
 }
 .products article
 {
-    margin: 15px 10%;
+    padding: 15px 10%;
     background-color: #d9d9d9;
-}
 }
 #latestProducts
 {
@@ -278,9 +385,9 @@ main, section
 .productsGrid
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
     grid-gap: 30px 30px;
-    padding: 0 10%;
+    padding: 0;
 }
 .mainProducts>a>img, .mainProducts>a
 {
@@ -311,6 +418,11 @@ main, section
     display: inline-flex;
 }
 
+#merchandisingProd .productData>div:nth-child(2)
+{
+    padding: 0 10%;
+}
+
 /*******************  Footer  *********************/
 footer
 {
@@ -330,7 +442,12 @@ footer div
 /******** Special clases *********/
 .hidden
 {
-	display: none;
+	visibility: hidden;
+    transition: 0s !important;
+}
+.none
+{
+    display: none;
 }
 .search-on
 {
@@ -338,7 +455,7 @@ footer div
 }
 .search-on #hdrSrchMobBtn
 {
-    transform: translatey(-405px);
+    transform: translatey(-305px);
 }
 @media all and (min-width: 360px)
 {
@@ -358,6 +475,14 @@ footer div
 }
 @media all and (min-width: 640px)
 {
+    .prod-h1 {
+        color: #A00;
+        background-color: transparent;
+    }
+    .actionButton
+    {
+        margin: 15px 10%;
+    }
     /********* Sections *********/
 	
 	.normalSection
@@ -366,16 +491,34 @@ footer div
 	}
     /********** Header **********/
 
-    #headerSearch {
-        display: initial;
-        transform: translate(50%, -360px);
+    #headerSearchPhone {
+        display: none; /*TO ERASE*/
+        /*display: initial;*/
+        transform: translate(50%, -100px); /*TODO: Avoid the obligation of changing translateY if main menu is modified.*/
         width: 45%;
+    }
+    
+    .searchButton.hidden
+    {
+        visibility: visible;
     }
     #hdrSrchMobBtn {
         display: none;
     }
     .logo>img {
         margin: 0 15%;
+    }
+    #merchandisingProd{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #merchandisingProd .productData>div:nth-child(2)
+    {
+        padding: 0;
+    }
+    .productsGrid article:hover
+    {
+        transform: scale(1.2);
     }
 }
 /*@media all and (min-width: 720px)
@@ -384,15 +527,24 @@ footer div
 }*/
 @media all and (min-width: 960px)
 {
+    .prod-h1 {
+        margin: 0 10%;
+    }
     nav label
     {
         display: none;
+    }    
+    h2
+    {
+        font-size: 1.5em;
     }
     
     /* Estilo del menú principal */
     #headerSearch {
+        display: initial;
         transform: translate(0, 15px);
     }
+    
     
     #logo-block
     {
@@ -407,9 +559,17 @@ footer div
         display: block;
         max-height: 90px;
     }
-    #mainMenu li
+    #mainMenu div:not(:first-child)
     {
-        padding: 15px 0;
+        left: 0;
+    }
+    #mainMenu li:not(.dropdown-menu)
+    {
+        padding: 15px 0; 
+        margin: 0 auto;   
+    }
+    .dropdown-menu, .dropdownList li:first-child
+    {
         margin: 15px auto;   
     }
     #mainMenu input
@@ -419,6 +579,11 @@ footer div
     #options, #langFlags
     {
         left: 0;
+    }
+    #options li
+    {   
+        text-align: center;
+        width: 100%
     }
     #mLateral
     {
@@ -438,5 +603,38 @@ footer div
         border-left: 47px solid transparent;
         transform: translateX(-46px);
         position: absolute;
+    }
+    .dropdownList
+    {
+        margin-top: 30px;
+    }
+    .menuOption
+    {
+        background-color: #FFF;
+        width: 100%;
+    }
+	/* Product style */
+	.prodInfo, .paragraphText
+	{
+		margin: 0 15%;
+	}
+    .actionButton
+    {
+        margin: 15px 15%;
+    }
+	.productData
+	{
+		padding: 100px 0;
+	}
+    .productsGrid
+    {
+        padding: 0 10%;
+    }
+}
+@media all and (min-width: 1280px)
+{
+    h2
+    {
+        font-size: 1.8em;
     }
 }

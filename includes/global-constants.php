@@ -21,6 +21,41 @@
 		const ONE = 1;
 		const TWO = 2;
 		const THREE = 3;
+
+		//SP category constants
+		const CAMISETAS = "camisetas";
+		const LATOSTADORA = "latostadora";
+		const HOMBRE = "hombre";
+		const MUJER = "mujer";
+		const CINE = "cine";
+		const VIDEOJUEGOS = "videojuegos";
+		const CROSSOVER = "crossover";
+		const SERIES = "series";
+		const DIGIMON = "digimon";
+		const POKEMON = "pokemon";
+
+		//URLs
+		const LOCALURL = "/Web_Debora/Web-personal/";
+		const WEBURL = "debsdesignweb.com/";
+
+		//URLs: Categories
+		const URL_CAMISETAS = "merchandising/camisetas";
+
+		//URLs: Tiendas
+		const URL_LATOSTADORA = "tiendas/latostadora";
+		
+		//URLs: Modelos
+		const URL_HOMBRE = "modelos/hombre";
+		const URL_MUJER = "modelos/mujer";
+		const URL_NINYOS = "modelos/ninyos";
+		
+		//URLs: Tematica
+		const URL_CINE = "tematica/cine";
+		const URL_VIDEOJUEGOS = "tematica/videojuegos";
+		const URL_CROSSOVER = "tematica/crossover";
+		const URL_SERIES = "tematica/series";
+		const URL_DIGIMON = "tematica/digimon";
+		const URL_POKEMON = "tematica/pokemon";
 		
     }
 ?>
