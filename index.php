@@ -10,11 +10,7 @@
         ?>
 		<!-- CONTENT -->
 		<main id="indexMainContent" class="mainSpecialContent">
-<<<<<<< HEAD
-			<h1 style="height: 0; padding: 0;">DebsDesignweb</h1>
-=======
 			<h1 class="index-h1">DebsDesign</h1>
->>>>>>> metaSeo
 			<article id="sliderInicio" class="slider">
 				<div class="bGSliderBig">
 					<img class = "slider_background" src="media/img/pictures/sliders/mainSlider/mainSlider-lrg/mainSlider-1.jpg" alt = "Primera diapositiva del slider principal"/>

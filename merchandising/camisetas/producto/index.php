@@ -1,11 +1,4 @@
 <?php
-<<<<<<< HEAD
-    // Page title, keywords & description
-    $title = "Producto"; //TO DO: esto es el nombre del producto en la BD
-    $keywords = "merchandising, camisetas, comprar camisetas, diseños, tienda, la tostadora";
-    $description = "Merchandising de DebsDesign";
-=======
->>>>>>> metaSeo
     
      // DOCTYPE declaration, <html>, <head>, <title>, <meta> y <link>. 
     include_once($_SERVER['DOCUMENT_ROOT']."/Web_Debora/Web-personal/includes/head.php");
